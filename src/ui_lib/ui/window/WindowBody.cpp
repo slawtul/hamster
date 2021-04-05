@@ -144,14 +144,6 @@ void WindowBody::append_welcome_items() const
     const auto row3 = *(ref_primary_item_store->append());
     row3[columns.item_value] = _("Press <Ctrl+P> to open preferences window");
     row3[columns.item_display_value] = _("Press <Ctrl+P> to open preferences window");
-
-    const auto row4 = *(ref_primary_item_store->append());
-    row4[columns.item_value] = "---";
-    row4[columns.item_display_value] = "---";
-
-    const auto row5 = *(ref_primary_item_store->append());
-    row5[columns.item_value] = _("Show app with system shortcut <Alt+V>");
-    row5[columns.item_display_value] = _("Show app with system shortcut <Alt+V>");
 }
 
 bool WindowBody::move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const
