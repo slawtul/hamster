@@ -111,7 +111,6 @@ WindowBody::WindowBody()
 
             ItemUtil iu {};
             const auto items_vec = iu.json_items_to_vec(fu.read_items_from_file());
-            g_print("%d", items_vec.size());
 
             UIUtil ui_util {};
             ui_util.append_to_store(ref_primary_item_store, items_vec);
