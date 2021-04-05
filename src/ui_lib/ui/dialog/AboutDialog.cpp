@@ -25,5 +25,5 @@ AboutDialog::AboutDialog()
     set_copyright("Slawek Tuleja");
     set_website("https://github.com/slawtul/hamster");
     set_website_label("https://github.com/slawtul/hamster");
-    set_logo(Gdk::Pixbuf::create_from_file("/home/slawtul/repos/hamster/data/icons/128/com.github.slawtul.hamster.svg"));
+    set_logo(Gdk::Pixbuf::create_from_file("/usr/share/icons/hicolor/128x128/apps/com.github.slawtul.hamster.svg"));
 }
