@@ -90,10 +90,10 @@ WindowBody::WindowBody()
     item_list.signal_focus_in_event().connect(sigc::mem_fun(*this, &WindowBody::on_item_list_focus_in));
     item_list.show();
 
-    if (ref_settings->get_boolean("app-first-run"))
+    if (ref_settings->get_boolean("first-run"))
     {
         append_welcome_items();
-        ref_settings->set_boolean("app-first-run", false);
+        ref_settings->set_boolean("first-run", false);
     }
     else if (ref_settings->get_boolean("save-list"))
     {
