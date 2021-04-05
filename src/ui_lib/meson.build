@@ -1,7 +1,7 @@
-gtkmm_dep  = dependency('gtkmm-3.0')
-x11_dep    = dependency('x11')
-xtst_dep   = dependency('xtst')
-xext_dep   = dependency('xext')
+gtkmm_dep = dependency('gtkmm-3.0')
+x11_dep   = dependency('x11')
+xtst_dep  = dependency('xtst')
+xext_dep  = dependency('xext')
 
 ui = static_library('ui', dependencies : [gtkmm_dep, x11_dep, xtst_dep, xext_dep, util_dep],
     sources : [

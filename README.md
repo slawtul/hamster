@@ -7,7 +7,7 @@ Clipboard manager for Debian-based distributions - for elementary OS mostly
 Before running app on you local machine, make sure you have *elementary-sdk* and *gtkmm-3.0* libs installed
 
 ```bash
-sudo apt install elementary-sdk gtkmm-3.0
+sudo apt install elementary-sdk gtkmm-3.0 libxt-dev
 ```
 
 ## How to build
