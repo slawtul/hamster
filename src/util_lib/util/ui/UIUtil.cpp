@@ -22,15 +22,15 @@ void UIUtil::append_to_store(Glib::RefPtr<Gtk::ListStore>& store, const std::vec
     {
         std::string display_value {};
         std::string value {};
-        for (const auto &[key_, value_] : item)
+        for (const auto& pair : item)
         {
-            if (key_ == "display_value")
+            if (pair.first == "display_value")
             {
-                display_value = value_;
+                display_value = pair.first;
             }
-            if (key_ == "value")
+            if (pair.second == "value")
             {
-                value = value_;
+                value = pair.second;
             }
         }
 
