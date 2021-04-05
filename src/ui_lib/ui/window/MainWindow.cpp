@@ -40,6 +40,7 @@ MainWindow::MainWindow()
 
     if (ref_settings->get_boolean("run-automatically"))
     {
+        mkdir(fu.autostart_dir().c_str(), 0775); // Create dir or do nothing...
         std::ifstream src {fu.user_apps_dir + fu.desktop_filename};
         std::ofstream dst {fu.autostart_dir() + fu.desktop_filename};
         dst << src.rdbuf();

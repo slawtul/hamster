@@ -18,6 +18,7 @@
 #ifndef HAMSTER_MAIN_WINDOW_H
 #define HAMSTER_MAIN_WINDOW_H
 
+#include <sys/stat.h>
 #include <glibmm/i18n.h>
 #include <gtkmm-3.0/gtkmm.h>
 #include <thread>
