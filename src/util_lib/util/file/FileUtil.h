@@ -18,8 +18,8 @@
 #define HAMSTER_FILE_UTIL_H
 
 #include <gtkmm-3.0/gtkmm.h>
+#include <sys/stat.h>
 #include <iostream>
-#include <experimental/filesystem>
 #include <fstream>
 #include <util/json/json.hpp>
 

@@ -20,7 +20,6 @@
 
 #include <glibmm/i18n.h>
 #include <gtkmm-3.0/gtkmm.h>
-#include <experimental/filesystem>
 #include <util/file/FileUtil.h>
 
 struct PreferencesWindow : public Gtk::Window

@@ -35,10 +35,14 @@ MainWindow::MainWindow()
     }
 
     FileUtil fu {};
-    std::experimental::filesystem::remove(fu.autostart_dir() + fu.desktop_filename);
+    const auto desktop_filepath = fu.autostart_dir() + fu.desktop_filename;
+    std::remove(desktop_filepath.c_str());
+
     if (ref_settings->get_boolean("run-automatically"))
     {
-        std::experimental::filesystem::copy_file(fu.user_apps_dir + fu.desktop_filename, fu.autostart_dir() + fu.desktop_filename);
+        std::ifstream src {fu.user_apps_dir + fu.desktop_filename};
+        std::ofstream dst {fu.autostart_dir() + fu.desktop_filename};
+        dst << src.rdbuf();
     }
 
     header_bar.set_show_close_button(true);

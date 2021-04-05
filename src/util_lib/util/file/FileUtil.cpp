@@ -36,8 +36,8 @@ std::string FileUtil::items_json_filepath()
 void FileUtil::write_items_to_file(std::vector<std::map<std::string, std::string>> items)
 {
     const auto json_file = items_json_filepath();
-    std::experimental::filesystem::create_directory(config_dir());
-    std::experimental::filesystem::remove(json_file); // Always write items to new file
+    mkdir(config_dir().c_str(), 0775); // Create dir or do nothing...
+    std::remove(json_file.c_str());    // Always write items to new file
 
     std::fstream fs {};
     fs.open(json_file, std::ios::in | std::ios::out | std::ios::app);

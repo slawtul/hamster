@@ -26,9 +26,9 @@ void UIUtil::append_to_store(Glib::RefPtr<Gtk::ListStore>& store, const std::vec
         {
             if (pair.first == "display_value")
             {
-                display_value = pair.first;
+                display_value = pair.second;
             }
-            if (pair.second == "value")
+            if (pair.first == "value")
             {
                 value = pair.second;
             }

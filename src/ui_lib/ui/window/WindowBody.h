@@ -27,6 +27,7 @@
 #include <regex>
 #include <chrono>
 #include <thread>
+#include <fstream>
 #include <util/text/TextUtil.h>
 #include <util/log/LogUtil.h>
 #include <util/ui/UIUtil.h>
