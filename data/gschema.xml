@@ -3,7 +3,7 @@
     <schema path="/com/github/slawtul/hamster/" id="com.github.slawtul.hamster"
             gettext-domain="com.github.slawtul.hamster">
         <key name="app-first-run" type="b">
-            <default>true</default>
+            <default>false</default>
         </key>
         <key name="run-automatically" type="b">
             <default>true</default>

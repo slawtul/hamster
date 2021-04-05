@@ -44,6 +44,8 @@ MainWindow::MainWindow()
         std::ifstream src {fu.user_apps_dir + fu.desktop_filename};
         std::ofstream dst {fu.autostart_dir() + fu.desktop_filename};
         dst << src.rdbuf();
+        src.close();
+        dst.close();
     }
 
     header_bar.set_show_close_button(true);
