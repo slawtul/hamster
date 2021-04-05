@@ -41,7 +41,7 @@ std::vector<std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gtk
 std::vector<std::map<std::string, std::string>> ItemUtil::json_items_to_vec(const json& j)
 {
     std::vector<std::map<std::string, std::string>> vec {};
-    for (const auto& item : j["items"])
+    for (std::map <std::string, std::string> item : j["items"])
     {
         vec.emplace_back(item);
     }
