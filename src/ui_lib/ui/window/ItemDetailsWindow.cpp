@@ -32,6 +32,7 @@ ItemDetailsWindow::ItemDetailsWindow()
     text_view.set_editable(false);
     text_view.set_cursor_visible(false);
     text_view.set_buffer(ref_text_buffer);
+    text_view.set_wrap_mode(Gtk::WrapMode::WRAP_WORD);
 
     scrolled_win.add(text_view);
 
