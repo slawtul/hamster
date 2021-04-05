@@ -19,7 +19,7 @@
 
 SettingsMenuButton::SettingsMenuButton()
 {
-    btn_icon.set_from_icon_name("system-run", Gtk::BuiltinIconSize::ICON_SIZE_SMALL_TOOLBAR);
-    set_image(btn_icon);
+//    btn_icon.set_from_icon_name("system-run", Gtk::BuiltinIconSize::ICON_SIZE_SMALL_TOOLBAR);
+//    set_image(btn_icon);
     set_popover(settings_popover);
 }
