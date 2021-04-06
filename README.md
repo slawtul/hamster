@@ -2,7 +2,7 @@
   <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
 </p>
 
-# Hamster
+<h1 align="left">Hamster</h1>
 
 Clipboard manager for Elementary OS
 
