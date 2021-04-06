@@ -28,7 +28,7 @@ You cannot paste text if you took a screenshot and pinned to desktop
 
 #### 2. About text item masking
 
-You can mask with stars ****** passwords but remember if you chose _'Save list to file'_ in 'Preferences' window your
+You can mask passwords with stars ****** but remember if you chose _'Save list to file'_ in 'Preferences' window your
 password will be save as __plain text__ in ~/.config/hamster/item.json file
 
 ```json
