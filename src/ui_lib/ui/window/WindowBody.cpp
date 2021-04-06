@@ -159,9 +159,19 @@ bool WindowBody::move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& te
 
 void WindowBody::delete_items(std::vector <Gtk::TreePath>&& paths)
 {
+    // Rows can be deleted using TreeRowReference only
+    std::vector <Gtk::TreeRowReference> row_refs {};
+    row_refs.reserve(paths.size());
     for (const auto& path : paths)
     {
-        Glib::RefPtr<Gtk::ListStore>::cast_dynamic(item_list.get_model())->erase(get_row(path));
+        row_refs.emplace_back(item_list.get_model(), path);
+    }
+
+    auto model = Glib::RefPtr<Gtk::ListStore>::cast_dynamic(item_list.get_model());
+    for (const auto& row_ref : row_refs)
+    {
+        auto iterator = model->get_iter(row_ref.get_path());
+        model->erase(iterator);
     }
 }
 
@@ -170,17 +180,6 @@ void WindowBody::delete_items(std::vector <Gtk::TreeRow>&& rows) const
     for (const auto& row : rows)
     {
         ref_primary_item_store->erase(row);
-    }
-}
-
-void WindowBody::delete_items(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const
-{
-    for (const auto& row : rows)
-    {
-        if (text.length() == row.get_value(columns.item_value).length() && text == row.get_value(columns.item_value))
-        {
-            ref_primary_item_store->erase(row);
-        }
     }
 }
 
@@ -295,7 +294,7 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
         text = tu.trim_str(text);
     }
 
-    // If copied test already exists move it to the top and do nothing else...
+    // If copied text already exists move it to the top and do nothing else...
     if (move_item(ref_primary_item_store->children(), text))
     {
         return;
