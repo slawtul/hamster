@@ -1,7 +1,8 @@
-<div style="float:left; width:100%">
-<h1 style="float:left">Hamster</h1>
-<img style="float:right" src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
-</div>
+# Hamster
+
+Clipboard manager for Elementary OS
+
+![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
 
 ## Development
 
