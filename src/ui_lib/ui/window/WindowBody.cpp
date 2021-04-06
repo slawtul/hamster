@@ -476,7 +476,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
         prefix = tu.convert_to_newline_or_tab(prefix);
         suffix = tu.convert_to_newline_or_tab(suffix);
 
-        past_items(prefix, suffix, true); // 'true' - add prefix and suffix even one item selected
+        past_items(prefix, suffix, true); // 'true' - add prefix and suffix even if one item selected
 
         return true;
     }
