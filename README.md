@@ -1,9 +1,10 @@
-<p align="center">
+<p align="right">
   <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
 </p>
 
-<h1 align="center">Hamster</h1>
-<p align="center">Clipboard manager for Elementary OS</p>
+# Hamster
+
+Clipboard manager for Elementary OS
 
 ## Development
 
