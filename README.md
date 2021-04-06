@@ -1,12 +1,10 @@
 # Hamster
 
-**All copied text in one place**
-
 Clipboard manager for Elementary OS
 
 ![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
 
-Key features:
+_Key features:_
 
 * Paste multiple items at once
 * Save items to a file
