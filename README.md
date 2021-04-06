@@ -1,10 +1,10 @@
+<p align="center">
+  <img src="data/icons/64/com.github.slawtul.hamster.svg" alt="icon" />
+</p>
+
 # Hamster
 
 Clipboard manager for Elementary OS
-
-<p align="center">
-  <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
-</p>
 
 ## Development
 
