@@ -44,7 +44,7 @@ password will be save as __plain text__ in ~/.config/hamster/item.json file
 }
 ```
 
-### Screenshots
+## Screenshots
 
 ![screenshot](data/screenshots/github/prefs_win.png)
 
