@@ -30,7 +30,7 @@ ninja
 ninja install
 ```
 
-## Show / hide app with custom keybinding
+## Open / Restore app with custom keybinding
 
 Inside `hamster/data` folder there is placed a `run_hamster.sh` file which you can bind to custom shortcut. I recommend
 a `ALT+V` key combination.
