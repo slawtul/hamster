@@ -3,7 +3,7 @@
 Clipboard manager for Elementary OS
 
 <p align="center">
-  <img width="188" height="184" src="https://github.com/slawtul/hamster/data/screenshots/hamster_icon.png">
+  <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
 </p>
 
 ## Development
