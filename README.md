@@ -5,6 +5,9 @@
 <h1 align="center">Hamster</h1>
 <p align="center">Clipboard manager for Elementary OS</p>
 
+<p align="center">
+  <img width="770" height="758" src="data/screenshots/wins.png" alt="hamster windows" />
+</p>
 
 ## Development
 
