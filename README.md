@@ -5,10 +5,6 @@
 <h1 align="center">Hamster</h1>
 <p align="center">Clipboard manager for Elementary OS</p>
 
-<p align="center">
-  <img width="840" height="800" src="data/screenshots/wins.png" alt="hamster windows" />
-</p>
-
 ## Development
 
 Before running app on you local machine, make sure you have installed below libs:
