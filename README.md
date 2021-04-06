@@ -1,8 +1,18 @@
 # Hamster
 
+**All copied text in one place**
+
 Clipboard manager for Elementary OS
 
 ![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
+
+Key features:
+
+* Paste multiple items at once
+* Save items to a file
+* Paste selected items with prefix and suffix
+* Transform an item to uppercase or lowercase
+* Mask an item with *******
 
 ## Development
 
