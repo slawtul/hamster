@@ -1,10 +1,11 @@
+<div style="float:left; width:100%">
+    <h1 style="float:left">Hamster</h1>
+
 <p align="right">
-  <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
+    <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="icon" />
 </p>
 
-<h1 align="left">Hamster</h1>
-
-Clipboard manager for Elementary OS
+</div>
 
 ## Development
 
