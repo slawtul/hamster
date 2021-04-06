@@ -43,3 +43,7 @@ password will be save as __plain text__ in ~/.config/hamster/item.json file
   ]
 }
 ```
+
+### Screenshots
+
+![screenshot](data/screenshots/wins.png)
