@@ -6,7 +6,7 @@
 <p align="center">Clipboard manager for Elementary OS</p>
 
 <p align="center">
-  <img width="770" height="758" src="data/screenshots/wins.png" alt="hamster windows" />
+  <img width="840" height="800" src="data/screenshots/wins.png" alt="hamster windows" />
 </p>
 
 ## Development
