@@ -21,7 +21,13 @@
     </provides>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/slawtul/hamster/main/data/screenshot.png</image>
+            <image>https://raw.githubusercontent.com/slawtul/hamster/main/data/screenshots/appcenter/main_win.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/slawtul/hamster/main/data/screenshots/appcenter/prefs_win.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/slawtul/hamster/main/data/screenshots/appcenter/keys_win.png</image>
         </screenshot>
     </screenshots>
     <developer_name>Slawek Tuleja</developer_name>
