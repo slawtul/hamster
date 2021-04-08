@@ -1,18 +1,25 @@
-# Hamster
+<p align="center">
+    <img src="data/icons/128/com.github.slawtul.hamster.svg" alt="Icon" />
+</p>
 
-Clipboard manager for Elementary OS
+<h1 align="center">Hamster</h1>
+<p align="center">Clipboard manager for Elementary OS</p>
 
-![screenshot](data/icons/64/com.github.slawtul.hamster.svg)
+<p align="center">
+  <a href="#not-yet"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+</p>
 
-_Key features:_
+<p align="center">
+    <img src="data/screenshots/github/main_win.png" alt="Screenshot">
+</p>
+
+## Key features
 
 * Paste multiple items at once
 * Save items to a file
 * Paste selected items with prefix and suffix
 * Transform an item to uppercase or lowercase
 * Mask an item with *******
-
-![screenshot](data/screenshots/github/main_win.png)
 
 ## Development
 
