@@ -6,7 +6,7 @@
 <p align="center">Clipboard manager for Elementary OS</p>
 
 <p align="center">
-    <img src="data/screenshots/github/main_win.png" alt="Screenshot">
+    <img width="482" height="682" src="data/screenshots/github/main_win.png" alt="Screenshot">
 </p>
 
 ## Key features
