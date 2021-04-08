@@ -37,8 +37,7 @@ ninja install
 
 ## Open / Restore app with custom keybinding
 
-Inside `hamster/data` folder there is placed a `run_hamster.sh` file which you can bind to custom shortcut. I recommend
-a `ALT+V` key combination.
+Inside `hamster/data` folder there is placed a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
 `run_hamster.sh` file **opens** an application or **restores** if minimized. `run_hamster.sh` uses **wmctrl**
 
 ![screenshot](data/screenshots/github/custom_keybinding.png)
@@ -51,8 +50,7 @@ You cannot paste text if you took a screenshot and pinned to desktop
 
 #### 2. About text item masking
 
-You can mask passwords with stars ****** but remember if you chose _'Save list to file'_ in 'Preferences' window your
-password will be save as __plain text__ in ~/.config/hamster/item.json file
+You can mask passwords with stars ****** but remember if you chose _'Save list to file'_ in 'Preferences' window your password will be save as __plain text__ in ~/.config/hamster/item.json file
 
 ```json
 {
@@ -67,6 +65,10 @@ password will be save as __plain text__ in ~/.config/hamster/item.json file
 
 ## Screenshots
 
-![screenshot](data/screenshots/github/prefs_win.png)
+<p align="center">
+    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
+</p>
 
-![screenshot](data/screenshots/github/keys_win.png)
+<p align="center">
+    <img src="data/screenshots/github/keys_win.png" alt="Screenshot">
+</p>
