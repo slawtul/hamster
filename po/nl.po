@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.slawtul.hamster\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-03 22:24+0200\n"
+"POT-Creation-Date: 2021-04-08 23:51+0200\n"
 "PO-Revision-Date: 2021-04-05 18:12+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.2\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl\n"
 
 #: src/ui_lib/ui/dialog/AboutDialog.cpp:22
 msgid "Hamster"
@@ -44,39 +44,34 @@ msgstr "Over"
 msgid "Quit"
 msgstr "Afsluiten"
 
-#: src/ui_lib/ui/window/MainWindow.cpp:45
+#: src/ui_lib/ui/window/MainWindow.cpp:52
 msgid "🐹 Hamster"
 msgstr "🐹 Hamster"
 
 #: src/ui_lib/ui/window/WindowBody.cpp:39
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:121
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:126
 msgid "Prefix:"
 msgstr "Voorvoegsel:"
 
 #: src/ui_lib/ui/window/WindowBody.cpp:44
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:122
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:127
 msgid "Suffix:"
 msgstr "Achtervoegsel:"
 
-#: src/ui_lib/ui/window/WindowBody.cpp:149
-#: src/ui_lib/ui/window/WindowBody.cpp:150
+#: src/ui_lib/ui/window/WindowBody.cpp:131
+#: src/ui_lib/ui/window/WindowBody.cpp:132
 msgid "Welcome to Hamster !"
 msgstr "Welkom bij Hamster!"
 
-#: src/ui_lib/ui/window/WindowBody.cpp:157
-#: src/ui_lib/ui/window/WindowBody.cpp:158
+#: src/ui_lib/ui/window/WindowBody.cpp:139
+#: src/ui_lib/ui/window/WindowBody.cpp:140
 msgid "Press <Ctrl+S> to open shortcuts window"
 msgstr "Druk op <Ctrl+S> om alle sneltoetsen te tonen"
 
-#: src/ui_lib/ui/window/WindowBody.cpp:161
-#: src/ui_lib/ui/window/WindowBody.cpp:162
+#: src/ui_lib/ui/window/WindowBody.cpp:143
+#: src/ui_lib/ui/window/WindowBody.cpp:144
 msgid "Press <Ctrl+P> to open preferences window"
 msgstr "Druk op <Ctrl+P> om de voorkeuren te openen"
-
-#: src/ui_lib/ui/window/WindowBody.cpp:169
-#: src/ui_lib/ui/window/WindowBody.cpp:170
-msgid "Show app with system shortcut <Alt+V>"
-msgstr "Druk op <Alt+V> om Hamster te openen"
 
 #: src/ui_lib/ui/window/ItemDetailsWindow.cpp:22
 msgid "Item details"
@@ -96,85 +91,91 @@ msgid "Run minimize"
 msgstr "Geminimaliseerd opstarten"
 
 #: src/ui_lib/ui/window/PreferencesWindow.cpp:46
+msgid "Set focus on a search input after pasting"
+msgstr ""
+
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:50
 msgid "Delay pasting [ms]"
 msgstr "Vertraging alvorens te plakken [in ms]"
 
 #. ITEMS PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:70
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:75
 msgid "<b>Text items</b>"
 msgstr "<b>Tekstitems</b>"
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:76
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:81
 msgid "Eliminate leading and trailing spaces"
 msgstr "Spaties voor en na items wissen"
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:80
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:85
 msgid "Save list to file"
 msgstr "Lijst opslaan als bestand"
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:84
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:89
 msgid "Item list size"
 msgstr "Grootte van itemlijst"
 
 #. ITEM PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:109
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:114
 msgid "<b>Paste selected items with:</b>"
 msgstr "<b>Geselecteerde items plakken met:</b>"
 
 #. APPLICATION SHORTCUTS
 #: src/ui_lib/ui/window/ShortcutsWindow.cpp:33
-msgid "Show application window"
-msgstr "Hamster openen"
-
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:37
 msgid "Open preferences window"
 msgstr "Voorkeuren openen"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:41
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:37
 msgid "Open shortcuts window"
 msgstr "Sneltoetsen tonen"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:45
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:41
 msgid "Quit application"
 msgstr "Hamster afsluiten"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:54
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:49
 msgid "Application"
 msgstr "Toepassing"
 
 #. TEXT ITEMS SHORTCUTS
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:58
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:53
 msgid "Paste item"
 msgstr "Item plakken"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:62
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:57
 msgid "Select items"
 msgstr "Items selecteren"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:66
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:61
 msgid "Set item prefix and suffix before pasting"
 msgstr "Voor- en achtervoegsel instellen alvorens te plakken"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:70
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:65
 msgid "Show item details"
 msgstr "Iteminformatie tonen"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:74
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:69
 msgid "Change to lowercase"
 msgstr "Omzetten naar kleine letters"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:78
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:73
 msgid "Change to uppercase"
 msgstr "Omzetten naar hoofdletters"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:82
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:77
 msgid "Mask with *********"
 msgstr "Maskeren met *********"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:86
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:81
 msgid "Delete item"
 msgstr "Item verwijderen"
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:99
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:94
 msgid "Text items"
 msgstr "Tekstitems"
+
+#~ msgid "Show app with system shortcut <Alt+V>"
+#~ msgstr "Druk op <Alt+V> om Hamster te openen"
+
+#~ msgid "Show application window"
+#~ msgstr "Hamster openen"

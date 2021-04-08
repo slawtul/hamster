@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.slawtul.hamster\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-03 22:24+0200\n"
+"POT-Creation-Date: 2021-04-08 23:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,38 +43,33 @@ msgstr ""
 msgid "Quit"
 msgstr ""
 
-#: src/ui_lib/ui/window/MainWindow.cpp:45
+#: src/ui_lib/ui/window/MainWindow.cpp:52
 msgid "🐹 Hamster"
 msgstr ""
 
 #: src/ui_lib/ui/window/WindowBody.cpp:39
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:121
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:126
 msgid "Prefix:"
 msgstr ""
 
 #: src/ui_lib/ui/window/WindowBody.cpp:44
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:122
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:127
 msgid "Suffix:"
 msgstr ""
 
-#: src/ui_lib/ui/window/WindowBody.cpp:149
-#: src/ui_lib/ui/window/WindowBody.cpp:150
+#: src/ui_lib/ui/window/WindowBody.cpp:131
+#: src/ui_lib/ui/window/WindowBody.cpp:132
 msgid "Welcome to Hamster !"
 msgstr ""
 
-#: src/ui_lib/ui/window/WindowBody.cpp:157
-#: src/ui_lib/ui/window/WindowBody.cpp:158
+#: src/ui_lib/ui/window/WindowBody.cpp:139
+#: src/ui_lib/ui/window/WindowBody.cpp:140
 msgid "Press <Ctrl+S> to open shortcuts window"
 msgstr ""
 
-#: src/ui_lib/ui/window/WindowBody.cpp:161
-#: src/ui_lib/ui/window/WindowBody.cpp:162
+#: src/ui_lib/ui/window/WindowBody.cpp:143
+#: src/ui_lib/ui/window/WindowBody.cpp:144
 msgid "Press <Ctrl+P> to open preferences window"
-msgstr ""
-
-#: src/ui_lib/ui/window/WindowBody.cpp:169
-#: src/ui_lib/ui/window/WindowBody.cpp:170
-msgid "Show app with system shortcut <Alt+V>"
 msgstr ""
 
 #: src/ui_lib/ui/window/ItemDetailsWindow.cpp:22
@@ -95,85 +90,85 @@ msgid "Run minimize"
 msgstr ""
 
 #: src/ui_lib/ui/window/PreferencesWindow.cpp:46
+msgid "Set focus on a search input after pasting"
+msgstr ""
+
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:50
 msgid "Delay pasting [ms]"
 msgstr ""
 
 #. ITEMS PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:70
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:75
 msgid "<b>Text items</b>"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:76
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:81
 msgid "Eliminate leading and trailing spaces"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:80
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:85
 msgid "Save list to file"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:84
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:89
 msgid "Item list size"
 msgstr ""
 
 #. ITEM PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:109
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:114
 msgid "<b>Paste selected items with:</b>"
 msgstr ""
 
 #. APPLICATION SHORTCUTS
 #: src/ui_lib/ui/window/ShortcutsWindow.cpp:33
-msgid "Show application window"
-msgstr ""
-
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:37
 msgid "Open preferences window"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:41
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:37
 msgid "Open shortcuts window"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:45
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:41
 msgid "Quit application"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:54
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:49
 msgid "Application"
 msgstr ""
 
 #. TEXT ITEMS SHORTCUTS
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:58
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:53
 msgid "Paste item"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:62
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:57
 msgid "Select items"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:66
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:61
 msgid "Set item prefix and suffix before pasting"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:70
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:65
 msgid "Show item details"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:74
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:69
 msgid "Change to lowercase"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:78
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:73
 msgid "Change to uppercase"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:82
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:77
 msgid "Mask with *********"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:86
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:81
 msgid "Delete item"
 msgstr ""
 
-#: src/ui_lib/ui/window/ShortcutsWindow.cpp:99
+#: src/ui_lib/ui/window/ShortcutsWindow.cpp:94
 msgid "Text items"
 msgstr ""
