@@ -1,4 +1,6 @@
-![screenshot](data/icons/64/com.github.slawtul.hamster.svg)
+<p style="float: right;">
+    <a target="_blank" rel="noopener noreferrer" href="/slawtul/hamster/blob/main/data/icons/64/com.github.slawtul.hamster.svg"><img src="/slawtul/hamster/raw/main/data/icons/64/com.github.slawtul.hamster.svg" alt="screenshot" style="max-width:100%;"></a>
+</p>
 
 # Hamster
 
