@@ -1,10 +1,8 @@
-<p style="float: right;" align="right">
-    <img src="https://raw.githubusercontent.com/slawtul/hamster/main/data/icons/64/com.github.slawtul.hamster.svg" alt="screenshot" style="max-width:100%;">
-</p>
-
 # Hamster
 
 Clipboard manager for Elementary OS
+
+![screenshot](data/icons/64/com.github.slawtul.hamster.svg)
 
 _Key features:_
 
