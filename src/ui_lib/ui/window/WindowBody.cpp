@@ -420,7 +420,10 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
     // 'ENTER' paste items
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Return)
     {
-        search_entry.grab_focus();
+        if (ref_settings->get_boolean("set-focus-on-search-input"))
+        {
+            search_entry.grab_focus();
+        }
         ps_separator.hide();
         prefix_suffix_form.hide();
         this->get_window()->iconify();
@@ -463,7 +466,11 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
     // 'ENTER' paste items
     if (type == GDK_KEY_RELEASE && key == GDK_KEY_Return && (state == 0 || state == 2 || state == 16 || state == 18))
     {
-        search_entry.grab_focus();
+        item_list.grab_focus();
+        if (ref_settings->get_boolean("set-focus-on-search-input"))
+        {
+            search_entry.grab_focus();
+        }
         ps_separator.hide();
         prefix_suffix_form.hide();
         this->get_window()->iconify();

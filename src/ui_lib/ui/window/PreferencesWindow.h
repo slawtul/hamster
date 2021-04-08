@@ -42,6 +42,7 @@ struct PreferencesWindow : public Gtk::Window
 
     Gtk::CheckButton run_automatically_check;
     Gtk::CheckButton run_minimize_check;
+    Gtk::CheckButton focus_search_input_check;
     Gtk::Label delay_pasting_label;
     Gtk::Scale delay_pasting_scale;
 
@@ -59,6 +60,7 @@ struct PreferencesWindow : public Gtk::Window
     bool on_key_press(GdkEventKey* key_event);
     void on_run_automatically_click();
     void on_run_minimize_click();
+    void on_focus_search_input_click();
     void on_delay_pasting_change();
     void on_eliminate_spaces_click();
     void on_save_list_click();

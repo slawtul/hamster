@@ -43,6 +43,10 @@ PreferencesWindow::PreferencesWindow()
     run_minimize_check.set_active(ref_settings->get_boolean("run-minimize"));
     run_minimize_check.signal_toggled().connect(sigc::mem_fun(*this, &PreferencesWindow::on_run_minimize_click));
 
+    focus_search_input_check.set_label(_("Set focus on a search input after pasting"));
+    focus_search_input_check.set_active(ref_settings->get_boolean("set-focus-on-search-input"));
+    focus_search_input_check.signal_toggled().connect(sigc::mem_fun(*this, &PreferencesWindow::on_focus_search_input_click));
+
     delay_pasting_label.set_label(_("Delay pasting [ms]"));
     delay_pasting_label.set_margin_top(6);
 
@@ -62,6 +66,7 @@ PreferencesWindow::PreferencesWindow()
     app_box.set_spacing(6);
     app_box.pack_start(run_automatically_check);
     app_box.pack_start(run_minimize_check);
+    app_box.pack_start(focus_search_input_check);
     app_box.pack_start(delay_pasting_label);
     app_box.pack_start(delay_pasting_scale);
     app_box.show_all();
@@ -197,6 +202,11 @@ void PreferencesWindow::on_run_automatically_click()
 void PreferencesWindow::on_run_minimize_click()
 {
     ref_settings->set_boolean("run-minimize", run_minimize_check.get_active());
+}
+
+void PreferencesWindow::on_focus_search_input_click()
+{
+    ref_settings->set_boolean("set-focus-on-search-input", focus_search_input_check.get_active());
 }
 
 void PreferencesWindow::on_delay_pasting_change()
