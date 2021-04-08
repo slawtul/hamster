@@ -40,6 +40,20 @@ ninja install
 Inside `hamster/data` folder there is placed a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
 `run_hamster.sh` file **opens** an application or **restores** if minimized. `run_hamster.sh` uses **wmctrl**
 
+```bash
+#!/bin/bash
+
+wmctrl -l | awk '{$1=$2=$3="";print}' | grep "🐹 Hamster"
+
+if [ $? -eq 0 ]; then
+    wmctrl -a "🐹 Hamster"
+    exit 1
+else
+    com.github.slawtul.hamster
+    exit 0
+fi
+```
+
 ![screenshot](data/screenshots/github/custom_keybinding.png)
 
 ## Known issues
