@@ -19,7 +19,7 @@
 
 ## Development
 
-Before running app on you local machine, make sure you have installed below libs:
+Before building app on you local machine, make sure you have installed below libs:
 
 ```bash
 sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
