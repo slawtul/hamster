@@ -6,10 +6,6 @@
 <p align="center">Clipboard manager for Elementary OS</p>
 
 <p align="center">
-  <a href="#not-yet"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
-</p>
-
-<p align="center">
     <img src="data/screenshots/github/main_win.png" alt="Screenshot">
 </p>
 
