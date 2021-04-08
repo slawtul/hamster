@@ -20,6 +20,7 @@ Before running app on you local machine, make sure you have installed below libs
 sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
 ```
 
+
 ## How to build
 
 ```bash
@@ -61,6 +62,8 @@ password will be save as __plain text__ in ~/.config/hamster/item.json file
 ```
 
 ## Screenshots
+
+![screenshot](data/screenshots/github/main_win.png)
 
 ![screenshot](data/screenshots/github/prefs_win.png)
 
