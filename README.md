@@ -12,6 +12,8 @@ _Key features:_
 * Transform an item to uppercase or lowercase
 * Mask an item with *******
 
+![screenshot](data/screenshots/github/main_win.png)
+
 ## Development
 
 Before running app on you local machine, make sure you have installed below libs:
@@ -61,8 +63,6 @@ password will be save as __plain text__ in ~/.config/hamster/item.json file
 ```
 
 ## Screenshots
-
-![screenshot](data/screenshots/github/main_win.png)
 
 ![screenshot](data/screenshots/github/prefs_win.png)
 
