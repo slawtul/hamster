@@ -1,8 +1,8 @@
+![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
+
 # Hamster
 
 Clipboard manager for Elementary OS
-
-![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
 
 _Key features:_
 
@@ -19,7 +19,6 @@ Before running app on you local machine, make sure you have installed below libs
 ```bash
 sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
 ```
-
 
 ## How to build
 
