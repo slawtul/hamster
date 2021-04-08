@@ -1,4 +1,4 @@
-![screenshot](data/icons/128/com.github.slawtul.hamster.svg)
+![screenshot](data/icons/64/com.github.slawtul.hamster.svg)
 
 # Hamster
 
