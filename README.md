@@ -22,7 +22,7 @@
 Before building an app on you local machine, make sure you have installed below libs:
 
 ```bash
-sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
+sudo apt install meson gtkmm-3.0 libxt-dev wmctrl
 ```
 
 ## Building
