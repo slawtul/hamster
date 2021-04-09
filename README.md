@@ -108,7 +108,8 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 
 ### Code Contributors
 
-<a href="https://github.com/slawtul/hamster/graphs/contributors"></a>
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/slawtul/hamster/graphs/contributors"><img src="https://opencollective.com/birdie/contributors.svg?width=890&button=false" /></a>
 
 ### Special thanks to
 
