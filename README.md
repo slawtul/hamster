@@ -43,10 +43,6 @@ ninja install
 
 ## Preferences
 
-<p align="center">
-    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
-</p>
-
 |Setting|Default value|Description|
 |---:|:---:|---|
 |**Application**|||
@@ -61,6 +57,10 @@ ninja install
 |**Paste selected items with**|||
 |Prefix|||
 |Suffix|\n||
+
+<p align="center">
+    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
+</p>
 
 ## Open / Restore app with Elementary OS custom keybinding
 
