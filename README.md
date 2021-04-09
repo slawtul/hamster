@@ -47,8 +47,9 @@ ninja install
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
 </p>
 
+
 | Setting | Description |
-| ---     |---          |
+| ---:     |---          |
 | **Application** ||
 | Run automatically on system startup ||
 | Run minimize ||
