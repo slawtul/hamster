@@ -43,6 +43,10 @@ ninja install
 
 ## Preferences
 
+<p align="center">
+    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
+</p>
+
 |Name|Value|Description|
 |---:|:---:|---|
 |**Application**|||
@@ -57,10 +61,6 @@ ninja install
 |**Paste selected items with**|||
 |Prefix|`empty`|No prefix by default|
 |Suffix|`\n`|When you select text items and press `Enter` key, each of item is pasted in the new line.<br> This is a default behaviour every time you press `Enter` key, however you can evoke a prefix/suffix form with `Shift+Enter` key combination any time before pasting|
-
-<p align="center">
-    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
-</p>
 
 ## Open / Restore app with Elementary OS custom keybinding
 
