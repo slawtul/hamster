@@ -49,7 +49,7 @@ ninja install
 |Run automatically on system startup|`true`|Obvious...|
 |Run minimize|`false`|Obvious...|
 |Set focus on a search input after pasting|`false`|You can choose if you want|
-|Delay pasting [ms]|`320`|Maybe you have got a slow PC? This setting will help to set correct time value before minimizing the app and pasting text to destination |
+|Delay pasting [ms]|`320`|Maybe you have got a slow PC? This setting will help to set correct time value before minimizing the Hamster and pasting text to destination window|
 |**Text items**|||
 |Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters will be removed before and after copied text|
 |Save list to file|`true`|Next time when you open the app you will see previously copied text items - otherwise an empty list. If `true` all text items are saved in _~ /.config/hamster/items.json_ file - when `false` - are kept in memory only|
