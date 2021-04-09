@@ -46,8 +46,8 @@ ninja install
 |Setting|Default value|Description|
 |---:|:---:|---|
 |**Application**|||
-|Run automatically on system startup|true|||
-|Run minimize|false||
+|Run automatically on system startup|true|<span style="color:gray">Obvious...</span>|
+|Run minimize|false|<span style="color:gray">Obvious...</span>|
 |Set focus on a search input after pasting|false|You can choose if you want|
 |Delay pasting [ms]|320|Maybe you have got a slow PC? This setting will help to set correct time value before minimizing the app and pasting text to destination |
 |**Text items**|||
