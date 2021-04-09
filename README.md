@@ -56,7 +56,7 @@ ninja install
 |Item list size|`256`|How many text items do you want to keep in the app?|
 |**Paste selected items with**|||
 |Prefix|`empty`|No prefix by default|
-|Suffix|`\n`|When you selected text items and pressed `Enter` key each of item will be pasted in the new line|
+|Suffix|`\n`|When you select text items and press `Enter` key, each of item is pasted in the new line.<br> This is a default behaviour every time you press `Enter` key, however you can evoke prefix/suffix form with `Shift+Enter` key combination before pasting |
 
 <p align="center">
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
