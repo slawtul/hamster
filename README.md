@@ -47,6 +47,21 @@ ninja install
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
 </p>
 
+| Setting | Description |
+| ---     |---          |
+| **Application** ||
+| Run automatically on system startup ||
+| Run minimize ||
+| Set focus on a search input after pasting ||
+| Delay pasting [ms] ||
+| **Text items** ||
+| Eliminate leading and trailing spaces ||
+| Save list to file | Next time when you open Hamster you will see previously copied text items |
+| Item list size ||
+| **Paste selected items with** ||
+| Prefix ||
+| Suffix ||
+
 ## Open / Restore app with Elementary OS custom keybinding
 
 Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
