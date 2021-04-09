@@ -52,8 +52,8 @@ ninja install
 |Delay pasting [ms]|320|Maybe you have got a slow PC? This setting will help to set correct value for delay pasting |
 |**Text items**|||
 |Eliminate leading and trailing spaces|true|Spaces, tabs, next line characters will be removed before and after copied text|
-|Save list to file|true|Next time when you open the app you will see previously copied text items - otherwise an empty list|
-|Item list size|256|How many text items do you want to keep in the app at the same time? If _'Save list to file'_ option is checked - all items will be saved in _~ /.config/hamster/items.json_ file|
+|Save list to file|true|Next time when you open the app you will see previously copied text items - otherwise an empty list. All text items will be saved in _~ /.config/hamster/items.json_ file|
+|Item list size|256|How many text items do you want to keep in the app at the same time?|
 |**Paste selected items with**|||
 |Prefix|||
 |Suffix|\n||
