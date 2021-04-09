@@ -64,6 +64,8 @@ ninja install
 
 ## Open / Restore app with Elementary OS custom keybinding
 
+![screenshot](data/screenshots/github/custom_keybinding.png)
+
 Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
 
 `run_hamster.sh` file **opens** an application or **restores** if minimized.
@@ -82,8 +84,6 @@ else
     exit 0
 fi
 ```
-
-![screenshot](data/screenshots/github/custom_keybinding.png)
 
 ## Known issues
 
