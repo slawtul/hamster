@@ -11,11 +11,11 @@
 
 ## Key features
 
-* Paste multiple items at once
-* Save items to a file
-* Paste selected items with prefix and suffix
+* Select and paste multiple items at once
 * Transform an item to uppercase or lowercase
 * Mask an item with *******
+* Paste selected items with prefix and suffix
+* Save items to a file
 
 ## Development
 
