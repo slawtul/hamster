@@ -2,5 +2,7 @@
 .vscode/
 tags
 build/
+builddir/
+.flatpak-builder/
 cmake-build-release/
 cmake-build-debug/
