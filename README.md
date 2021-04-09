@@ -52,7 +52,7 @@ ninja install
 |Delay pasting [ms]|`320`|Maybe you have got a slow PC? This setting will help to set correct time value before minimizing the Hamster and pasting text to destination window. On my very old laptop from 2007, _delay pasting_ set to `200` ms was too fast|
 |**Text items**|||
 |Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters will be removed before and after copied text|
-|Save list to file|`true`|Next time when you open the app you will see previously copied text items - otherwise an empty list. If `true` all text items are saved in _~ /.config/hamster/items.json_ file - when `false` - are kept in memory only|
+|Save list to file|`true`|Next time when you open the app you will see previously copied text items - otherwise an empty list. If `true` all text items are saved in _'~ /.config/hamster/items.json'_ file - when `false` - are kept in memory only|
 |Item list size|`256`|How many text items do you want to keep in the app at the same time?|
 |**Paste selected items with**|||
 |Prefix|``||
