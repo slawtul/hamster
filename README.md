@@ -43,7 +43,7 @@ ninja install
 
 ## Preferences
 
-|Setting|Default|Description|
+|Name|Value|Description|
 |---:|:---:|---|
 |**Application**|||
 |Run automatically on system startup|`true`||
