@@ -48,20 +48,20 @@ ninja install
 </p>
 
 
-| Setting | Description |
-| ---:     |---          |
-| **Application** ||
-| Run automatically on system startup ||
-| Run minimize ||
-| Set focus on a search input after pasting ||
-| Delay pasting [ms] ||
-| **Text items** ||
-| Eliminate leading and trailing spaces ||
-| Save list to file | Next time when you open Hamster you will see previously copied text items |
-| Item list size ||
-| **Paste selected items with** ||
-| Prefix ||
-| Suffix ||
+|Setting|Default value|Description|
+|---:|:---:|---|
+|**Application**|||
+|Run automatically on system startup|true|||
+|Run minimize|false||
+|Set focus on a search input after pasting|false||
+|Delay pasting [ms]|320||
+|**Text items**|||
+|Eliminate leading and trailing spaces|true||
+|Save list to file|true|Next time when you open Hamster you will see previously copied text items|
+|Item list size|256||
+|**Paste selected items with**|||
+|Prefix|||
+|Suffix|\n||
 
 ## Open / Restore app with Elementary OS custom keybinding
 
