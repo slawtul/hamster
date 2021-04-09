@@ -47,7 +47,7 @@ ninja install
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
 </p>
 
-## Open / Restore app with custom keybinding
+## Open / Restore app with Elementary OS custom keybinding
 
 Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
 
