@@ -35,27 +35,6 @@ ninja
 ninja install
 ```
 
-## Known issues
-
-#### 1. Pinned screenshot from Flameshot app
-
-You cannot paste text if you took a screenshot and pinned to desktop
-
-#### 2. About text item masking
-
-You can mask passwords with stars ****** but remember if you chose _'Save list to file'_ in _'Preferences'_ window your password will be saved as __plain text__ in ~/.config/hamster/item.json file
-
-```json
-{
-  "items": [
-    {
-      "display_value": "A******3",
-      "value": "Admin123"
-    }
-  ]
-}
-```
-
 ## Preferences
 
 <p align="center">
@@ -104,4 +83,25 @@ else
     com.github.slawtul.hamster
     exit 0
 fi
+```
+
+## Known issues
+
+#### 1. Pinned screenshot from Flameshot app
+
+You cannot paste text if you took a screenshot and pinned to desktop
+
+#### 2. About text item masking
+
+You can mask passwords with stars ****** but remember if you chose _'Save list to file'_ in _'Preferences'_ window your password will be saved as __plain text__ in ~/.config/hamster/item.json file
+
+```json
+{
+  "items": [
+    {
+      "display_value": "A******3",
+      "value": "Admin123"
+    }
+  ]
+}
 ```
