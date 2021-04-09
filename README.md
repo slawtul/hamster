@@ -49,14 +49,14 @@ ninja install
 |Run automatically on system startup|`true`||
 |Run minimize|`false`||
 |Set focus on a search input after pasting|`false`|Do you want to move focus from text item list to search input after pasting?|
-|Delay pasting [ms]|`320`|Maybe you have got a slow PC? This setting will help to set correct time value before minimizing a Hamster window and pasting text to destination window. <br>On my very old laptop from 2007, _delay pasting_ set to less then `200` ms was problematic|
+|Delay pasting [ms]|`320`|Maybe you have got a slow PC? This adjustment helps to set correct time value before minimizing a Hamster window and pasting text to destination window. <br>On my very old laptop from 2007, _Delay pasting_ set to less then `200` ms was problematic|
 |**Text items**|||
-|Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters will be removed before and after copied text.<br> From: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:  `Hello hamster`|
+|Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters are removed before and after copied text.<br> From: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:  `Hello hamster`|
 |Save list to file|`true`|Next time when you open the app you will see previously copied text items - otherwise an empty list. <br>If `true` &nbsp;&nbsp;text items are saved in _'~ /.config/hamster/items.json'_ file <br>If `false` text items are kept in memory only|
 |Item list size|`256`|How many text items do you want to keep in the app?|
 |**Paste selected items with**|||
 |Prefix|`empty`|No prefix by default|
-|Suffix|`\n`|When you select text items and press `Enter` key, each of item is pasted in the new line.<br> This is a default behaviour every time you press `Enter` key, however you can evoke prefix/suffix form with `Shift+Enter` key combination before pasting |
+|Suffix|`\n`|When you select text items and press `Enter` key, each of item is pasted in the new line.<br> This is a default behaviour every time you press `Enter` key, however you can evoke any time prefix/suffix form with `Shift+Enter` key combination before pasting|
 
 <p align="center">
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
