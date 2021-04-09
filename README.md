@@ -105,3 +105,9 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
   ]
 }
 ```
+
+### Special thanks to
+
+* BobMorane (stackoverflow answer)
+* Michi (stackoverflow answer)
+* Vistaus (Dutch translation)
