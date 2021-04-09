@@ -17,24 +17,6 @@
 * Paste selected items with prefix and suffix
 * Save items to a file
 
-## Development
-
-Before building an app on you local machine, make sure you have installed below libs:
-
-```bash
-sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
-```
-
-## Building
-
-```bash
-cd hamster
-meson build --prefix=/usr
-cd build
-ninja
-ninja install
-```
-
 ## Preferences
 
 <p align="center">
@@ -83,6 +65,24 @@ else
     com.github.slawtul.hamster
     exit 0
 fi
+```
+
+## Development
+
+Before building an app on you local machine, make sure you have installed below libs:
+
+```bash
+sudo apt install elementary-sdk gtkmm-3.0 libxt-dev wmctrl
+```
+
+## Building
+
+```bash
+cd hamster
+meson build --prefix=/usr
+cd build
+ninja
+ninja install
 ```
 
 ## Known issues
