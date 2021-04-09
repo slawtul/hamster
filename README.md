@@ -111,3 +111,7 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 * BobMorane (stackoverflow answer)
 * Michi (stackoverflow answer)
 * Vistaus (Dutch translation)
+
+#### Donation via PayPal
+
+[![screenshot](data/screenshots/github/pay-pal.png)](https://www.paypal.com/paypalme/slawtul)
