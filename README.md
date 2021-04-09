@@ -35,6 +35,18 @@ ninja
 ninja install
 ```
 
+## Shortcuts
+
+<p align="center">
+    <img src="data/screenshots/github/keys_win.png" alt="Screenshot">
+</p>
+
+## Preferences
+
+<p align="center">
+    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
+</p>
+
 ## Open / Restore app with custom keybinding
 
 Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
@@ -78,13 +90,3 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
   ]
 }
 ```
-
-## Screenshots
-
-<p align="center">
-    <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
-</p>
-
-<p align="center">
-    <img src="data/screenshots/github/keys_win.png" alt="Screenshot">
-</p>
