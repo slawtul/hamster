@@ -106,6 +106,10 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 }
 ```
 
+### Code Contributors
+
+<a href="https://github.com/slawtul/hamster/graphs/contributors"></a>
+
 ### Special thanks to
 
 * BobMorane (stackoverflow answer)
