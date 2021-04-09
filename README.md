@@ -47,7 +47,6 @@ ninja install
     <img src="data/screenshots/github/prefs_win.png" alt="Screenshot">
 </p>
 
-
 |Setting|Default value|Description|
 |---:|:---:|---|
 |**Application**|||
@@ -58,7 +57,7 @@ ninja install
 |**Text items**|||
 |Eliminate leading and trailing spaces|true|Spaces, tabs, next line characters will be removed before and after copied text|
 |Save list to file|true|Next time when you open Hamster you will see previously copied text items|
-|Item list size|256||
+|Item list size|256|How many text items do you want to keep in a application at the same time? If _'Save list to file'_ option is checked - all items will be saved in _~ /.config/hamster/items.json_ file|
 |**Paste selected items with**|||
 |Prefix|||
 |Suffix|\n||
