@@ -51,7 +51,7 @@ ninja install
 |Set focus on a search input after pasting|`false`|Do you want to move cursor (focus) from text item list to search input after pasting?|
 |Delay pasting [ms]|`320`|Maybe you have got a slow PC? This adjustment helps to set correct time value before minimizing a Hamster window and pasting text to destination window. <br>On my very old laptop from 2007, _Delay pasting_ set to less then `200` ms was problematic|
 |**Text items**|||
-|Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters are removed from beginning and ending of a copied text.<br> From: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:  `Hello hamster`|
+|Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters are removed from beginning and ending of a copied text.<br> Before: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;After:  `Hello hamster`|
 |Save list to file|`true`|Next time when you open the app you will see previously copied text items - otherwise an empty list. <br>If `true` &nbsp;&nbsp;text items are saved in _'~ /.config/hamster/items.json'_ file <br>If `false` text items are kept in memory only|
 |Item list size|`256`|How many text items do you want to keep in the app?|
 |**Paste selected items with**|||
