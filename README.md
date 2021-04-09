@@ -38,7 +38,9 @@ ninja install
 ## Open / Restore app with custom keybinding
 
 Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` key combination.
-`run_hamster.sh` file **opens** an application or **restores** if minimized. `run_hamster.sh` uses **wmctrl**
+
+`run_hamster.sh` file **opens** an application or **restores** if minimized.
+`run_hamster.sh` uses **wmctrl**
 
 ```bash
 #!/bin/bash
