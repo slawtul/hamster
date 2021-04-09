@@ -1,4 +1,4 @@
-project('com.github.slawtul.hamster', 'cpp', version: '1.0.0', default_options : ['warning_level=3', 'cpp_std=c++14'])
+project('com.github.slawtul.hamster', 'cpp', version: '1.0.1', default_options : ['warning_level=3', 'cpp_std=c++14'])
 
 gnome = import('gnome')
 i18n = import('i18n')
