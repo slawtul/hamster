@@ -48,7 +48,7 @@ ninja install
 |**Application**|||
 |Run automatically on system startup|`true`||
 |Run minimize|`false`||
-|Set focus on a search input after pasting|`false`|Do you want to move focus from text item list to search input after pasting?|
+|Set focus on a search input after pasting|`false`|Do you want to move cursor (focus) from text item list to search input after pasting?|
 |Delay pasting [ms]|`320`|Maybe you have got a slow PC? This adjustment helps to set correct time value before minimizing a Hamster window and pasting text to destination window. <br>On my very old laptop from 2007, _Delay pasting_ set to less then `200` ms was problematic|
 |**Text items**|||
 |Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters are removed before and after copied text.<br> From: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:  `Hello hamster`|
