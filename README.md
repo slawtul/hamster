@@ -62,7 +62,7 @@ ninja install
     <img src="data/screenshots/github/keys_win.png" alt="Screenshot">
 </p>
 
-## Open / Restore app with Elementary OS custom keybinding
+## Open / Restore app with Elementary OS custom shortcut
 
 ![screenshot](data/screenshots/github/custom_keybinding.png)
 
