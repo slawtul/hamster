@@ -94,6 +94,19 @@ modules:
       - /lib/atkmm-1.6
       - /lib/pkgconfig
 
+  - name: libxt
+    sources:
+      - type: archive
+        url: http://deb.debian.org/debian/pool/main/libx/libxt/libxt_1.2.0.orig.tar.gz
+        sha256: 'd4bee88898fc5e1dc470e361430c72fbc529b9cdbbb6c0ed3affea3a39f97d8d'
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/libxt-1.2
+      - /lib/libxt-1.2
+      - /lib/pkgconfig
+
   - name: gtk+3.0
     sources:
       - type: archive
