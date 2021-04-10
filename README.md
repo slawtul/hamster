@@ -85,7 +85,7 @@ else
 fi
 ```
 
-Do not forget to install `wmctrl`:
+__Do not forget to install__ `wmctrl`:
 
 ```bash
 sudo apt install wmctrl
