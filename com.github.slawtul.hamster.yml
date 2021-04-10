@@ -19,11 +19,108 @@ finish-args:
   - '--share=ipc'
   - '--socket=fallback-x11'
   - '--socket=wayland'
+  - '--filesystem=~/.config/autostart:create'
+  - '--filesystem=~/.config/hamster:create'
 
 # This section is where you list all the source code required to build your app.
 # If we had external dependencies that weren't included in our SDK, we would list
 # them here.
 modules:
+  - name: sigc++
+    sources:
+      - sha256: 0b68dfc6313c6cc90ac989c6d722a1bf0585ad13846e79746aa87cb265904786
+        type: archive
+        url: http://ftp.gnome.org/pub/GNOME/sources/libsigc++/2.10/libsigc++-2.10.3.tar.xz
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/sigc++-2.0
+      - /lib/sigc++-2.0
+      - /lib/pkgconfig
+
+  - name: glibmm
+    sources:
+      - sha256: a75282e58d556d9b2bb44262b6f5fb76c824ac46a25a06f527108bec86b8d4ec
+        type: archive
+        url: http://ftp.gnome.org/pub/GNOME/sources/glibmm/2.64/glibmm-2.64.2.tar.xz
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/glibmm-2.4
+      - /include/giomm-2.4
+      - /lib/glibmm-2.4
+      - /lib/giomm-2.4
+      - /lib/libglibmm_generate_extra_defs*
+      - /lib/pkgconfig
+
+  - name: cairomm
+    sources:
+      - sha256: a54ada8394a86182525c0762e6f50db6b9212a2109280d13ec6a0b29bfd1afe6
+        type: archive
+        url: http://ftp.gnome.org/pub/GNOME/sources/cairomm/1.12/cairomm-1.12.0.tar.xz
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/cairomm-1.0
+      - /lib/cairomm-1.0
+      - /lib/pkgconfig
+
+  - name: pangomm
+    sources:
+      - sha256: 14bf04939930870d5cfa96860ed953ad2ce07c3fd8713add4a1bfe585589f40f
+        type: archive
+        url: http://ftp.gnome.org/pub/GNOME/sources/pangomm/2.42/pangomm-2.42.1.tar.xz
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/pangomm-1.4
+      - /lib/pangomm-1.4
+      - /lib/pkgconfig
+
+  - name: atkmm
+    sources:
+      - sha256: 4c4cfc917fd42d3879ce997b463428d6982affa0fb660cafcc0bc2d9afcedd3a
+        type: archive
+        url: http://ftp.gnome.org/pub/GNOME/sources/atkmm/2.28/atkmm-2.28.0.tar.xz
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/atkmm-1.6
+      - /lib/atkmm-1.6
+      - /lib/pkgconfig
+
+  - name: gtk+3.0
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gtk%2B/3.22/gtk+-3.22.0.tar.xz
+        sha256: '88d0bb584be7ecec965b82ba88a9cf0aafd6f03eff7447653295ab2341c74134'
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/gtk+-3.0
+      - /lib/gtk+-3.0
+      - /lib/pkgconfig
+
+  - name: gtkmm3.0
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/gtkmm/3.22/gtkmm-3.22.3.tar.xz
+        sha256: '178c2728a4f37eae986eabdd758547cd7579d15000048596fa6bbc25cbba5c90'
+    config-opts:
+      - --disable-documentation
+    cleanup:
+      - '*.la'
+      - /include/gtkmm-3.0
+      - /lib/gdkmm-3.0
+      - /lib/gtkmm-3.0
+      - /lib/pkgconfig
+
   - name: hamster
     buildsystem: meson
     sources:
