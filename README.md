@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">Hamster</h1>
-<p align="center">Clipboard manager for Elementary OS</p>
+<p align="center">Clipboard manager for Elementary OS and Ubuntu</p>
 
 <p align="center">
     <img width="482" height="682" src="data/screenshots/github/main_win.png" alt="Screenshot">
@@ -21,8 +21,13 @@
 
 Before building an app on you local machine, make sure you have installed below libs:
 
+__Elementary Os >= 5__
 ```bash
 sudo apt install meson gtkmm-3.0 libxt-dev
+```
+__Ubuntu >= 20.04__
+```bash
+sudo apt install meson libgtkmm-3.0-dev libxt-dev gettext
 ```
 
 ## Building
