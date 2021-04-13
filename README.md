@@ -21,7 +21,7 @@
 
 Before building an app on you local machine, make sure you have installed below libs:
 
-__Elementary Os >= 5__
+__Elementary >= 5__
 ```bash
 sudo apt install meson gtkmm-3.0 libxt-dev
 ```
