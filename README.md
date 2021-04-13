@@ -33,6 +33,7 @@ meson build --prefix=/usr
 cd build
 ninja
 ninja install
+```
 
 and run:
 ```bash
