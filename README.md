@@ -27,7 +27,7 @@ sudo apt install meson gtkmm-3.0 libxt-dev
 ```
 __Ubuntu >= 20.04__
 ```bash
-sudo apt install meson libgtkmm-3.0-dev libxt-dev gettext
+sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext
 ```
 
 ## Building
