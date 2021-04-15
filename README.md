@@ -23,7 +23,7 @@ Before building an app on you local machine, make sure you have installed below 
 
 __Elementary >= 5__
 ```bash
-sudo apt install meson gtkmm-3.0 libxt-dev
+sudo apt install meson g++ gtkmm-3.0 libxt-dev gettext
 ```
 __Ubuntu >= 20.04__
 ```bash
