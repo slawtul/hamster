@@ -40,14 +40,22 @@
         <value key="x-appcenter-suggested-price">5</value>
     </custom>
     <releases>
+        <release version="1.1.0" date="2021-04-22">
+            <description>
+                <ul>
+                    <li>An app appears on all workspaces</li>
+                    <li>A search input can be empty after pasting</li>
+                </ul>
+            </description>
+        </release>
         <release version="1.0.0" date="2021-04-11">
             <description>
                 <p>Initial release 🎉️</p>
+                <p>Translations:</p>
+                <ul>
+                    <li>Dutch (by Heimen Stoffels)</li>
+                </ul>
             </description>
-            <p>Translations:</p>
-            <ul>
-                <li>Dutch (by Heimen Stoffels)</li>
-            </ul>
         </release>
     </releases>
 </component>
