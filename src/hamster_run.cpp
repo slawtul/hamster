@@ -27,6 +27,7 @@ int main(int argc, char* argv[])
     auto app = Gtk::Application::create("com.github.slawtul.hamster");
 
     MainWindow win {};
+    win.stick(); // It will appear on all workspaces
     win.present();
 
     return app->run(win, argc, argv);
