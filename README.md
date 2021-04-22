@@ -57,6 +57,7 @@ com.github.slawtul.hamster
 |Run automatically on system startup|`true`||
 |Run minimize|`false`||
 |Set focus on a search input after pasting|`false`|Do you want to move cursor (focus) from text item list to search input after pasting?|
+|Clear a search input after pasting|`false`||
 |Delay pasting [ms]|`320`|Maybe you have got a slow PC? This adjustment helps to set correct time value after minimizing a Hamster window and pasting text to destination window. <br>On my very old laptop from 2007, _Delay pasting_ set to less then `200` ms was problematic|
 |**Text items**|||
 |Eliminate leading and trailing spaces|`true`|Spaces, tabs, next line characters are removed from beginning and ending of a copied text.<br> Before: `\t\t    Hello hamster \n`<br>&nbsp;&nbsp;&nbsp;After:  `Hello hamster`|
