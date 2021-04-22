@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.slawtul.hamster\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 23:51+0200\n"
+"POT-Creation-Date: 2021-04-22 17:46+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,12 +48,12 @@ msgid "🐹 Hamster"
 msgstr ""
 
 #: src/ui_lib/ui/window/WindowBody.cpp:39
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:126
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:131
 msgid "Prefix:"
 msgstr ""
 
 #: src/ui_lib/ui/window/WindowBody.cpp:44
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:127
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:132
 msgid "Suffix:"
 msgstr ""
 
@@ -94,28 +94,32 @@ msgid "Set focus on a search input after pasting"
 msgstr ""
 
 #: src/ui_lib/ui/window/PreferencesWindow.cpp:50
+msgid "Clear a search input after pasting"
+msgstr ""
+
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:54
 msgid "Delay pasting [ms]"
 msgstr ""
 
 #. ITEMS PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:75
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:80
 msgid "<b>Text items</b>"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:81
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:86
 msgid "Eliminate leading and trailing spaces"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:85
-msgid "Save list to file"
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:90
+msgid "Save list to a file"
 msgstr ""
 
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:89
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:94
 msgid "Item list size"
 msgstr ""
 
 #. ITEM PREFERENCES
-#: src/ui_lib/ui/window/PreferencesWindow.cpp:114
+#: src/ui_lib/ui/window/PreferencesWindow.cpp:119
 msgid "<b>Paste selected items with:</b>"
 msgstr ""
 

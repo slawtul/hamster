@@ -14,6 +14,9 @@
         <key name="set-focus-on-search-input" type="b">
             <default>false</default>
         </key>
+        <key name="clear-search-input" type="b">
+            <default>false</default>
+        </key>
         <key name="delay-pasting" type="d">
             <default>320</default>
         </key>

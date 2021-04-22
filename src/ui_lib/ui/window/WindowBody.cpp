@@ -437,6 +437,10 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 
         past_items(prefix, suffix, false); // 'false' - do not add prefix and suffix when one item selected only
 
+        if (ref_settings->get_boolean("clear-search-input"))
+        {
+            search_entry.set_text("");
+        }
         return true;
     }
 
@@ -484,6 +488,10 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
 
         past_items(prefix, suffix, true); // 'true' - add prefix and suffix even if one item selected
 
+        if (ref_settings->get_boolean("clear-search-input"))
+        {
+            search_entry.set_text("");
+        }
         return true;
     }
 
