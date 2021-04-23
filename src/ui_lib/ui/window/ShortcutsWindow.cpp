@@ -103,16 +103,12 @@ ShortcutsWindow::ShortcutsWindow()
 
 bool ShortcutsWindow::on_key_press(GdkEventKey* key_event)
 {
-    if (key_event == nullptr)
-    {
+    if (key_event == nullptr) {
         return false;
     }
-
-    if (key_event->keyval == GDK_KEY_Escape)
-    {
+    if (key_event->keyval == GDK_KEY_Escape) {
         hide();
         return true;
     }
-
     return false;
 }
