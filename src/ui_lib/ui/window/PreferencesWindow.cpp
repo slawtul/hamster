@@ -172,12 +172,10 @@ PreferencesWindow::PreferencesWindow()
 
 bool PreferencesWindow::on_key_press(GdkEventKey* key_event)
 {
-    if (key_event == nullptr)
-    {
+    if (key_event == nullptr) {
         return false;
     }
-    if (key_event->keyval == GDK_KEY_Escape)
-    {
+    if (key_event->keyval == GDK_KEY_Escape) {
         hide();
         return true;
     }
@@ -232,8 +230,7 @@ void PreferencesWindow::on_eliminate_spaces_click()
 void PreferencesWindow::on_save_list_click()
 {
     ref_settings->set_boolean("save-list", save_list_check.get_active());
-    if (!save_list_check.get_active())
-    {
+    if (!save_list_check.get_active()) {
         FileUtil fu {};
         std::remove(fu.items_json_filepath().c_str());
     }

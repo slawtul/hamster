@@ -27,8 +27,7 @@ std::vector<std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gtk
     {
         const auto display_value = row.get_value(columns.item_display_value);
         const auto value = row.get_value(columns.item_value);
-        if (value.length() == 0)
-        {
+        if (value.length() == 0) {
             continue;
         }
         std::map<std::string, std::string> item {{"display_value", display_value},
@@ -41,8 +40,7 @@ std::vector<std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gtk
 std::vector<std::map<std::string, std::string>> ItemUtil::json_items_to_vec(const json& j)
 {
     std::vector<std::map<std::string, std::string>> vec {};
-    for (const std::map <std::string, std::string>& item : j["items"])
-    {
+    for (const std::map <std::string, std::string>& item : j["items"]) {
         vec.emplace_back(item);
     }
     return vec;

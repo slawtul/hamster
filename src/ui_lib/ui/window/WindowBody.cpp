@@ -177,8 +177,7 @@ void WindowBody::delete_items(std::vector <Gtk::TreePath>&& paths)
 
 void WindowBody::delete_items(std::vector <Gtk::TreeRow>&& rows) const
 {
-    for (const auto& row : rows)
-    {
+    for (const auto& row : rows) {
         ref_primary_item_store->erase(row);
     }
 }
@@ -186,10 +185,8 @@ void WindowBody::delete_items(std::vector <Gtk::TreeRow>&& rows) const
 void WindowBody::delete_last_items(int store_sz, int max_list_size) const
 {
     const auto diff_sz = store_sz - max_list_size;
-    if (diff_sz > 0)
-    {
-        for (int i = 1; i <= diff_sz; ++i)
-        {
+    if (diff_sz > 0) {
+        for (int i = 1; i <= diff_sz; ++i) {
             ref_primary_item_store->erase(ref_primary_item_store->children()[store_sz - i]);
         }
     }
@@ -231,8 +228,7 @@ void WindowBody::mask_with_stars(std::vector <Gtk::TreePath>&& paths)
 void WindowBody::mask_with_stars(std::vector <Gtk::TreeRow>&& rows) const
 {
     TextUtil tu {};
-    for (const auto& row : rows)
-    {
+    for (const auto& row : rows) {
         row[columns.item_display_value] = tu.mask_str(row.get_value(columns.item_display_value));
         row[columns.item_value] = row.get_value(columns.item_value);
     }
@@ -275,8 +271,7 @@ void WindowBody::on_search_change()
 
 void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
 {
-    if (event == nullptr)
-    {
+    if (event == nullptr) {
         return;
     }
 
@@ -284,19 +279,15 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
     auto text = ref_clipboard->wait_for_text();
 
     TextUtil tu {};
-    if (tu.has_only_spaces(text))
-    {
+    if (tu.has_only_spaces(text)) {
         return;
     }
-
-    if (ref_settings->get_boolean("eliminate-spaces"))
-    {
+    if (ref_settings->get_boolean("eliminate-spaces")) {
         text = tu.trim_str(text);
     }
 
     // If copied text already exists move it to the top and do nothing else...
-    if (move_item(ref_primary_item_store->children(), text))
-    {
+    if (move_item(ref_primary_item_store->children(), text)) {
         return;
     }
 
@@ -351,8 +342,7 @@ void WindowBody::on_rows_reordered([[maybe_unused]] const Gtk::TreeModel::Path& 
 
 bool WindowBody::on_item_list_focus_in(GdkEventFocus* focus_event)
 {
-    if (focus_event == nullptr)
-    {
+    if (focus_event == nullptr) {
         return false;
     }
 
@@ -369,8 +359,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 {
     // Events with 'Enter' key cannot be fetched with 'signal_key_press_event' in ListTextView widget
     // In this widget 'Enter' means: row edit mode
-    if (gdk_event == nullptr)
-    {
+    if (gdk_event == nullptr) {
         return false;
     }
 
@@ -437,8 +426,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 
         past_items(prefix, suffix, false); // 'false' - do not add prefix and suffix when one item selected only
 
-        if (ref_settings->get_boolean("clear-search-input"))
-        {
+        if (ref_settings->get_boolean("clear-search-input")) {
             search_entry.set_text("");
         }
         return true;
@@ -449,8 +437,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 
 bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
 {
-    if (gdk_event == nullptr)
-    {
+    if (gdk_event == nullptr) {
         return false;
     }
 
@@ -471,10 +458,10 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
     if (type == GDK_KEY_RELEASE && key == GDK_KEY_Return && (state == 0 || state == 2 || state == 16 || state == 18))
     {
         item_list.grab_focus();
-        if (ref_settings->get_boolean("set-focus-on-search-input"))
-        {
+        if (ref_settings->get_boolean("set-focus-on-search-input")) {
             search_entry.grab_focus();
         }
+
         ps_separator.hide();
         prefix_suffix_form.hide();
         this->get_window()->iconify();
@@ -488,8 +475,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
 
         past_items(prefix, suffix, true); // 'true' - add prefix and suffix even if one item selected
 
-        if (ref_settings->get_boolean("clear-search-input"))
-        {
+        if (ref_settings->get_boolean("clear-search-input")) {
             search_entry.set_text("");
         }
         return true;
@@ -500,8 +486,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
 
 bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
 {
-    if (key_event == nullptr)
-    {
+    if (key_event == nullptr) {
         return false;
     }
 
@@ -574,8 +559,7 @@ bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
 
 bool WindowBody::on_search_entry_event(GdkEvent* gdk_event)
 {
-    if (gdk_event == nullptr)
-    {
+    if (gdk_event == nullptr) {
         return false;
     }
 
@@ -628,8 +612,7 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
     const auto path_list = get_selected_paths();
     auto selected_paths = path_list; // Reverse a copied vector
 
-    if (selection_order == SelectionOrder::SHIFT_UP)
-    {
+    if (selection_order == SelectionOrder::SHIFT_UP) {
         std::reverse(selected_paths.begin(), selected_paths.end());
     }
 
@@ -639,12 +622,9 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
         const auto row = get_row(path);
         const auto item_value = row.get_value(columns.item_value);
 
-        if (decorate_any_item)
-        {
+        if (decorate_any_item) {
             text_to_paste += prefix + item_value + suffix;
-        }
-        else
-        {
+        } else {
             text_to_paste += path_list.size() == 1 ? item_value : prefix + item_value + suffix;
         }
     }
@@ -671,8 +651,7 @@ std::vector <Gtk::TreeRow> WindowBody::convert_to_rows(std::vector <Gtk::TreePat
     std::vector <Gtk::TreeRow> rows;
     rows.reserve(paths.size());
 
-    for (const auto& path : paths)
-    {
+    for (const auto& path : paths) {
         rows.emplace_back(get_row(path));
     }
     return rows;

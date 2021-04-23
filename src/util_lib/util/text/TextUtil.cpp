@@ -37,8 +37,7 @@ const std::regex TextUtil::line_re {"\\|"};
 
 Glib::ustring TextUtil::sub_str(const Glib::ustring& text, uint n_letters, const Glib::ustring& end)
 {
-    if (text.length() > n_letters)
-    {
+    if (text.length() > n_letters) {
         return text.substr(0, n_letters).append(end);
     }
     return text;
@@ -58,8 +57,7 @@ Glib::ustring TextUtil::trim_str(const Glib::ustring& text)
 {
     const auto whitespaces = " \t\n";
     const auto begin = text.find_first_not_of(whitespaces);
-    if (begin == std::string::npos)
-    {
+    if (begin == std::string::npos) {
         return ""; // No content
     }
     const auto end = text.find_last_not_of(whitespaces);
@@ -69,8 +67,7 @@ Glib::ustring TextUtil::trim_str(const Glib::ustring& text)
 
 std::string TextUtil::mask_str(const Glib::ustring& text)
 {
-    if (text.empty())
-    {
+    if (text.empty()) {
         return "";
     }
 
@@ -81,8 +78,7 @@ std::string TextUtil::mask_str(const Glib::ustring& text)
 
     std::string masked_str = "";
     masked_str += first_letter;
-    for (size_t i = 0; i < str_sz - 2; i++)
-    {
+    for (size_t i = 0; i < str_sz - 2; i++) {
         masked_str += '*';
     }
     masked_str += last_letter;

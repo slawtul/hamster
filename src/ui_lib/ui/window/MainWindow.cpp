@@ -29,8 +29,7 @@ MainWindow::MainWindow()
 
     (x == -1 && y == -1) ? set_position(Gtk::WIN_POS_CENTER) : move(x, y);
 
-    if (ref_settings->get_boolean("run-minimize"))
-    {
+    if (ref_settings->get_boolean("run-minimize")) {
         this->iconify();
     }
 
@@ -84,8 +83,7 @@ void MainWindow::show_about_dialog()
 
 void MainWindow::hide_about_dialog(int response_id)
 {
-    if (response_id == Gtk::ResponseType::RESPONSE_DELETE_EVENT)
-    {
+    if (response_id == Gtk::ResponseType::RESPONSE_DELETE_EVENT) {
         about_dialog.hide();
     }
 }
@@ -126,8 +124,7 @@ void MainWindow::close_app()
 
 bool MainWindow::on_main_window_event(GdkEvent* gdk_event)
 {
-    if (gdk_event == nullptr)
-    {
+    if (gdk_event == nullptr) {
         return false;
     }
 
@@ -137,22 +134,19 @@ bool MainWindow::on_main_window_event(GdkEvent* gdk_event)
         const auto key = gdk_event->key.keyval;
 
         // 'CTRL + P' show properties window
-        if (key == GDK_KEY_p || key == GDK_KEY_P)
-        {
+        if (key == GDK_KEY_p || key == GDK_KEY_P) {
             show_preferences_win();
             return true;
         }
 
         // 'CTRL + S' show shortcuts window
-        if (key == GDK_KEY_s || key == GDK_KEY_S)
-        {
+        if (key == GDK_KEY_s || key == GDK_KEY_S) {
             show_shortcuts_win();
             return true;
         }
 
         // 'CTRL + Q' quit application
-        if (key == GDK_KEY_q || key == GDK_KEY_Q)
-        {
+        if (key == GDK_KEY_q || key == GDK_KEY_Q) {
             close_app();
             return true;
         }
@@ -163,8 +157,7 @@ bool MainWindow::on_main_window_event(GdkEvent* gdk_event)
 
 bool MainWindow::on_delete_event(GdkEventAny* any_event)
 {
-    if (any_event == nullptr)
-    {
+    if (any_event == nullptr) {
         return false;
     }
     close_app();
