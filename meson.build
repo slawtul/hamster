@@ -8,12 +8,7 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), la
 subdir('src/util_lib')
 subdir('src/ui_lib')
 
-executable(
-    meson.project_name(),
-    'src/hamster_run.cpp',
-    dependencies : [util_dep, ui_dep],
-    install: true
-)
+executable(meson.project_name(), 'src/hamster_run.cpp', dependencies : [util_dep, ui_dep], install: true)
 
 subdir('data')
 subdir('po')
