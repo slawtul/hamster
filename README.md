@@ -19,7 +19,7 @@
 
 ## Development
 
-Before building an app on you local machine, make sure you have installed below libs:
+Before building an app on your local machine, make sure you have installed below libs:
 
 __Elementary >= 5__
 ```bash
