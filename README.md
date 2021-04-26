@@ -23,11 +23,11 @@ Before building an app on your local machine, make sure you have installed below
 
 __Elementary >= 5__
 ```bash
-sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext
+sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext wmctrl
 ```
 __Ubuntu >= 20.04__
 ```bash
-sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext
+sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext wmctrl
 ```
 
 ## Building
@@ -94,12 +94,6 @@ else
     com.github.slawtul.hamster
     exit 0
 fi
-```
-
-__Do not forget to install__ `wmctrl`:
-
-```bash
-sudo apt install wmctrl
 ```
 
 ## Known issues
