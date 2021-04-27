@@ -20,7 +20,7 @@
 ShortcutsWindow::ShortcutsWindow()
 {
     set_title(_("Shortcuts"));
-    set_default_size(520, 540);
+    set_default_size(-1, -1);
     set_resizable(false);
     set_decorated(true);
     set_position(Gtk::WindowPosition::WIN_POS_CENTER_ON_PARENT);
