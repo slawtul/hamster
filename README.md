@@ -123,7 +123,7 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 
 #### 4. Ubuntu terminal does not work with Hamster
 
-`Shift+Ctrl+V` is a default shortcut for pasting in Ubuntu terminal. Please change it to `Ctrl+V`
+`SHIFT+CTRL+V` is a default shortcut for pasting in Ubuntu terminal. Please change it to `CTRL+V`
 ![screenshot](data/screenshots/github/ubuntu_terminal_paste_shortcut.png)
 
 ### Special thanks to
