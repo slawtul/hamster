@@ -77,7 +77,7 @@ com.github.slawtul.hamster
 
 ![screenshot](data/screenshots/github/custom_keybinding.png)
 
-Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` or `Super+V` key combination.
+Inside `hamster/data` folder there is a `run_hamster.sh` file which you can bind to custom shortcut. I recommend a `ALT+V` or `SUPER+V` key combination.
 
 `run_hamster.sh` file **opens** an application or **restores** if minimized.
 `run_hamster.sh` uses `wmctrl`
@@ -120,6 +120,11 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
   ]
 }
 ```
+
+#### 4. Ubuntu terminal does not work with Hamster
+
+`Shift+Ctrl+V` is a default shortcut for pasting in Ubuntu terminal. Please change it to `Ctrl+V`
+![screenshot](data/screenshots/github/ubuntu_terminal_paste_shortcut.png)
 
 ### Special thanks to
 
