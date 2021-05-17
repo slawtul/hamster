@@ -128,7 +128,7 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 
 #### 5. Hamster on all desktops
 
-If _`Run minimize`_ is set to true, application is visible only on one desktop
+If a `Run minimize` is set to `true`, application is visible only on one desktop
 
 ### Special thanks to
 
