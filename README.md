@@ -126,9 +126,9 @@ You can mask passwords with stars ****** but remember if you chose _'Save list t
 `SHIFT+CTRL+V` is a default shortcut for pasting in Ubuntu terminal. Please change it to `CTRL+V`
 ![screenshot](data/screenshots/github/ubuntu_terminal_paste_shortcut.png)
 
-#### 5. Hamster on all desktops
+#### 5. Hamster on all workspaces
 
-If a `Run minimize` is set to `true`, application is visible only on one desktop
+If a `Run minimize` is set to `true`, application is visible only on one workspace
 
 ### Special thanks to
 
