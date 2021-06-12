@@ -139,3 +139,8 @@ If a `Run minimize` is set to `true`, application is visible only on one workspa
 #### Donation via PayPal
 
 [![screenshot](data/screenshots/github/pay-pal.png)](https://www.paypal.com/paypalme/slawtul)
+
+
+### Hamster on Ubuntu 20.04
+
+![screenshot](data/screenshots/github/hamster-on-ubuntu-20.04.png)
