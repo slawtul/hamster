@@ -27,7 +27,7 @@ MainWindow::MainWindow()
     auto const x=ref_settings->get_int("window-x");
     auto const y=ref_settings->get_int("window-y");
 
-    (x==-1&&y==-1)?set_position(Gtk::WIN_POS_CENTER):move(x, y);
+    (x==-1&&y==-1) ? set_position(Gtk::WIN_POS_CENTER) : move(x, y);
 
     if(ref_settings->get_boolean("run-minimize")){
         this->iconify();

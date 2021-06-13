@@ -393,7 +393,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
         --selection_counter;
     }
 
-    selection_order=selection_counter<0?SelectionOrder::SHIFT_DOWN:SelectionOrder::SHIFT_UP;
+    selection_order=selection_counter<0 ? SelectionOrder::SHIFT_DOWN : SelectionOrder::SHIFT_UP;
 
     //'SHIFT+ENTER' paste but before show prefix and suffix entry fields
     if(type==GDK_KEY_PRESS&&key==GDK_KEY_Return&&is_SHIFT_pressed)
@@ -575,7 +575,7 @@ bool WindowBody::on_search_entry_event(GdkEvent* gdk_event)
     //'ESC' clear search entry or minimize application
     if(type==GDK_KEY_PRESS&&key==GDK_KEY_Escape)
     {
-        search_entry.get_text_length()==0 ? this->get_window()->iconify():search_entry.set_text("");
+        search_entry.get_text_length()==0 ? this->get_window()->iconify() : search_entry.set_text("");
         search_entry.grab_focus();
         return true;
     }
