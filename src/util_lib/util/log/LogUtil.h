@@ -23,7 +23,7 @@
 struct LogUtil
 {
     void log_if_debug(const std::string& log_text);
-    void log_if_debug(const std::string& log_text, size_t num);
+    void log_if_debug(const std::string& log_text,size_t num);
 };
 
-#endif // HAMSTER_LOG_UTIL_H
+#endif //HAMSTER_LOG_UTIL_H

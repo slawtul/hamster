@@ -6,3 +6,6 @@ builddir/
 .flatpak-builder/
 cmake-build-release/
 cmake-build-debug/
+*.sublime-project
+*.sublime-workspace
+compile_commands.json

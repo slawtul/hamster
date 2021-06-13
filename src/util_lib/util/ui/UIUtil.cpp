@@ -16,29 +16,29 @@
  */
 #include "UIUtil.h"
 
-void UIUtil::append_to_store(Glib::RefPtr<Gtk::ListStore>& store, const std::vector<std::map<std::string, std::string>>& items) const
+void UIUtil::append_to_store(Glib::RefPtr<Gtk::ListStore>& store,const std::vector<std::map<std::string,std::string>>& items) const
 {
-    for (const auto& item : items)
+    for(const auto& item:items)
     {
-        std::string display_value {};
-        std::string value {};
-        for (const auto& pair : item)
+        std::string display_value{};
+        std::string value{};
+        for(const auto& pair:item)
         {
-            if (pair.first == "display_value") {
-                display_value = pair.second;
+            if(pair.first=="display_value"){
+                display_value=pair.second;
             }
-            if (pair.first == "value") {
-                value = pair.second;
+            if(pair.first=="value"){
+                value=pair.second;
             }
         }
 
-        if (value.length() == 0) {
+        if(value.length()==0){
             continue;
         }
 
-        const auto row = *(store->append());
-        row[columns.item_value] = value;
-        row[columns.item_display_value] = display_value;
+        const auto row=*(store->append());
+        row[columns.item_value]=value;
+        row[columns.item_display_value]=display_value;
     }
 
 }

@@ -25,14 +25,14 @@
 
 struct FileUtil
 {
-    std::string desktop_filename = "com.github.slawtul.hamster.desktop";
-    std::string user_apps_dir = "/usr/share/applications/";
+    std::string desktop_filename="com.github.slawtul.hamster.desktop";
+    std::string user_apps_dir="/usr/share/applications/";
 
     std::string config_dir();
     std::string autostart_dir();
     std::string items_json_filepath();
-    void write_items_to_file(std::vector<std::map<std::string, std::string>> items);
+    void write_items_to_file(std::vector<std::map<std::string,std::string>> items);
     nlohmann::json read_items_from_file();
 };
 
-#endif // HAMSTER_FILE_UTIL_H
+#endif //HAMSTER_FILE_UTIL_H

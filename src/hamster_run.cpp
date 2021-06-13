@@ -22,13 +22,13 @@
 
 #include <ui/window/MainWindow.h>
 
-int main(int argc, char* argv[])
+int main(int argc,char* argv[])
 {
-    auto app = Gtk::Application::create("com.github.slawtul.hamster");
+    auto app=Gtk::Application::create("com.github.slawtul.hamster");
 
-    MainWindow win {};
+    MainWindow win{};
     win.stick();
     win.present();
 
-    return app->run(win, argc, argv);
+    return app->run(win,argc,argv);
 }
