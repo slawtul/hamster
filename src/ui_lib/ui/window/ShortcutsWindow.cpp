@@ -20,12 +20,12 @@
 ShortcutsWindow::ShortcutsWindow()
 {
     set_title(_("Shortcuts"));
-    set_default_size(-1, -1);
+    set_default_size(-1,-1);
     set_resizable(false);
     set_decorated(true);
     set_position(Gtk::WindowPosition::WIN_POS_CENTER_ON_PARENT);
 
-    this->signal_key_press_event().connect(sigc::mem_fun(*this, &ShortcutsWindow::on_key_press));
+    this->signal_key_press_event().connect(sigc::mem_fun(*this,&ShortcutsWindow::on_key_press));
 
     section.property_visible().set_value(true);
 
@@ -103,10 +103,10 @@ ShortcutsWindow::ShortcutsWindow()
 
 bool ShortcutsWindow::on_key_press(GdkEventKey* key_event)
 {
-    if (key_event == nullptr) {
+    if(key_event==nullptr){
         return false;
     }
-    if (key_event->keyval == GDK_KEY_Escape) {
+    if(key_event->keyval==GDK_KEY_Escape){
         hide();
         return true;
     }

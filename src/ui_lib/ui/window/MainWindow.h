@@ -32,7 +32,7 @@
 #include <ui/popover/SettingsPopover.h>
 #include <ui/popover/SettingsMenuButton.h>
 
-struct MainWindow : public Gtk::ApplicationWindow
+struct MainWindow:public Gtk::ApplicationWindow
 {
     MainWindow();
 

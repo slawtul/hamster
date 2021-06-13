@@ -21,7 +21,7 @@
 #include <gtkmm-3.0/gtkmm.h>
 #include <glibmm/i18n.h>
 
-struct AboutDialog : public Gtk::AboutDialog
+struct AboutDialog:public Gtk::AboutDialog
 {
     AboutDialog();
 };

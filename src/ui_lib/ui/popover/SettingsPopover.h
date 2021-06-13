@@ -21,7 +21,7 @@
 #include <gtkmm-3.0/gtkmm.h>
 #include <glibmm/i18n.h>
 
-struct SettingsPopover : public Gtk::PopoverMenu
+struct SettingsPopover:public Gtk::PopoverMenu
 {
     SettingsPopover();
 

@@ -21,7 +21,7 @@
 #include <glibmm/i18n.h>
 #include <gtkmm-3.0/gtkmm.h>
 
-struct ItemDetailsWindow : public Gtk::Window
+struct ItemDetailsWindow:public Gtk::Window
 {
     ItemDetailsWindow();
 
