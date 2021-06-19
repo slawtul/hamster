@@ -29,8 +29,10 @@ std::vector <std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gt
         if (value.length() == 0) {
             continue;
         }
-        std::map <std::string, std::string> item{{"display_value", display_value},
-                                                 {"value",         value}};
+        std::map <std::string, std::string> item{
+                {"display_value", display_value},
+                {"value",         value}
+        };
         vec.emplace_back(item);
     }
     return vec;
