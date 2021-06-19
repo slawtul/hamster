@@ -23,11 +23,11 @@
 #include <gtkmm-3.0/gtkmm.h>
 #include <util/file/FileUtil.h>
 
-struct PreferencesWindow:public Gtk::Window
+struct PreferencesWindow : public Gtk::Window
 {
     PreferencesWindow();
 
-    Glib::RefPtr<Gio::Settings> ref_settings;
+    Glib::RefPtr <Gio::Settings> ref_settings;
 
     Gtk::VBox v_box;
 

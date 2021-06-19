@@ -21,7 +21,7 @@
 #include <gtkmm-3.0/gtkmm.h>
 #include <glibmm/i18n.h>
 
-struct ShortcutsWindow:public Gtk::Window
+struct ShortcutsWindow : public Gtk::Window
 {
     ShortcutsWindow();
 

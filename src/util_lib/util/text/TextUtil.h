@@ -40,9 +40,9 @@ struct TextUtil
     static const std::regex cbra_r_re;
     static const std::regex line_re;
 
-    Glib::ustring join_lines(Glib::ustring& text,uint n_letters);
+    Glib::ustring join_lines(Glib::ustring& text, uint n_letters);
     Glib::ustring trim_str(const Glib::ustring& text);
-    Glib::ustring sub_str(const Glib::ustring& text,uint n_letters,const Glib::ustring& end_text);
+    Glib::ustring sub_str(const Glib::ustring& text, uint n_letters, const Glib::ustring& end_text);
     Glib::ustring calculate_display_value(Glib::ustring& text);
     std::string mask_str(const Glib::ustring& text);
 

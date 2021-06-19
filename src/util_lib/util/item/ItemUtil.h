@@ -23,8 +23,8 @@
 
 struct ItemUtil
 {
-    std::vector<std::map<std::string,std::string>> items_to_vec(const Gtk::TreeModel::Children& rows);
-    std::vector<std::map<std::string,std::string>> json_items_to_vec(const nlohmann::basic_json<>& j);
+    std::vector <std::map<std::string, std::string>> items_to_vec(const Gtk::TreeModel::Children& rows);
+    std::vector <std::map<std::string, std::string>> json_items_to_vec(const nlohmann::basic_json<>& j);
 };
 
 #endif //HAMSTER_ITEM_UTIL_H

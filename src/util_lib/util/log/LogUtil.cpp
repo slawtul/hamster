@@ -23,7 +23,7 @@ void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text)
 #endif
 }
 
-void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text,[[maybe_unused]] size_t num)
+void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text, [[maybe_unused]] size_t num)
 {
 #ifdef DEBUG
     g_print(log_text.c_str(),num);

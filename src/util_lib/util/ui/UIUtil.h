@@ -19,10 +19,10 @@
 
 #include <gtkmm-3.0/gtkmm.h>
 
-struct ItemModelColumns:public Gtk::TreeModel::ColumnRecord
+struct ItemModelColumns : public Gtk::TreeModel::ColumnRecord
 {
-    Gtk::TreeModelColumn<Glib::ustring> item_display_value; //Modified clipboard text value showed in list view widget
-    Gtk::TreeModelColumn<Glib::ustring> item_value;         //Original clipboard text value
+    Gtk::TreeModelColumn <Glib::ustring> item_display_value; //Modified clipboard text value showed in list view widget
+    Gtk::TreeModelColumn <Glib::ustring> item_value;         //Original clipboard text value
 
     ItemModelColumns()
     {
@@ -34,7 +34,7 @@ struct ItemModelColumns:public Gtk::TreeModel::ColumnRecord
 struct UIUtil
 {
     ItemModelColumns columns{};
-    void append_to_store(Glib::RefPtr<Gtk::ListStore>& store,const std::vector<std::map<std::string,std::string>>& items) const;
+    void append_to_store(Glib::RefPtr <Gtk::ListStore>& store, const std::vector <std::map<std::string, std::string>>& items) const;
 };
 
 #endif //HAMSTER_UI_UTIL_H

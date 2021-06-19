@@ -67,10 +67,10 @@ struct WindowBody : public Gtk::VBox
 
     ItemModelColumns columns;
     Gtk::ListViewText item_list;
-    Glib::RefPtr<Gtk::ListStore> ref_primary_item_store;   // All items go here
-    Glib::RefPtr<Gtk::ListStore> ref_secondary_item_store; // Only searched items go here
-    Glib::RefPtr<Gtk::Clipboard> ref_clipboard;
-    Glib::RefPtr<Gio::Settings> ref_settings;
+    Glib::RefPtr <Gtk::ListStore> ref_primary_item_store;   // All items go here
+    Glib::RefPtr <Gtk::ListStore> ref_secondary_item_store; // Only searched items go here
+    Glib::RefPtr <Gtk::Clipboard> ref_clipboard;
+    Glib::RefPtr <Gio::Settings> ref_settings;
 
     int selection_counter;
     SelectionOrder selection_order;
@@ -97,22 +97,22 @@ struct WindowBody : public Gtk::VBox
 
     // ACTIONS
     void show_item_details_window(const Glib::ustring& text);
-    void transform_to_lowercase(std::vector<Gtk::TreePath>&& paths);
-    void transform_to_lowercase(std::vector<Gtk::TreeRow>&& rows) const;
-    void transform_to_uppercase(std::vector<Gtk::TreePath>&& paths);
-    void transform_to_uppercase(std::vector<Gtk::TreeRow>&& rows) const;
-    void mask_with_stars(std::vector<Gtk::TreePath>&& paths);
-    void mask_with_stars(std::vector<Gtk::TreeRow>&& rows) const;
+    void transform_to_lowercase(std::vector <Gtk::TreePath>&& paths);
+    void transform_to_lowercase(std::vector <Gtk::TreeRow>&& rows) const;
+    void transform_to_uppercase(std::vector <Gtk::TreePath>&& paths);
+    void transform_to_uppercase(std::vector <Gtk::TreeRow>&& rows) const;
+    void mask_with_stars(std::vector <Gtk::TreePath>&& paths);
+    void mask_with_stars(std::vector <Gtk::TreeRow>&& rows) const;
     bool move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const;
-    void delete_items(std::vector<Gtk::TreePath>&& paths);
-    void delete_items(std::vector<Gtk::TreeRow>&& rows) const;
+    void delete_items(std::vector <Gtk::TreePath>&& paths);
+    void delete_items(std::vector <Gtk::TreeRow>&& rows) const;
     void delete_last_items(int store_sz, int max_list_size) const;
 
     // HELPER METHODS
     Gtk::TreeRow get_row(const Gtk::TreeModel::Path& path);
-    std::vector<Gtk::TreeModel::Path> get_selected_paths();
-    std::vector<Gtk::TreeRow> find_primary_store_rows(std::vector<Gtk::TreePath>&& paths);
-    std::vector<Gtk::TreeRow> convert_to_rows(std::vector<Gtk::TreePath>& paths);
+    std::vector <Gtk::TreeModel::Path> get_selected_paths();
+    std::vector <Gtk::TreeRow> find_primary_store_rows(std::vector <Gtk::TreePath>&& paths);
+    std::vector <Gtk::TreeRow> convert_to_rows(std::vector <Gtk::TreePath>& paths);
     void past_items(const std::string& prefix, const std::string& suffix, bool decorate_any_item);
     void append_welcome_items() const;
 };

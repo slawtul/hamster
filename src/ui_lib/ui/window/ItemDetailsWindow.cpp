@@ -25,9 +25,9 @@ ItemDetailsWindow::ItemDetailsWindow()
     set_decorated(true);
     set_position(Gtk::WindowPosition::WIN_POS_CENTER_ON_PARENT);
 
-    this->signal_key_press_event().connect(sigc::mem_fun(*this,&ItemDetailsWindow::on_key_press));
+    this->signal_key_press_event().connect(sigc::mem_fun(*this, &ItemDetailsWindow::on_key_press));
 
-    ref_text_buffer=Gtk::TextBuffer::create();
+    ref_text_buffer = Gtk::TextBuffer::create();
 
     text_view.set_editable(false);
     text_view.set_cursor_visible(false);
@@ -54,10 +54,10 @@ void ItemDetailsWindow::set_text(const Glib::ustring& text) const
 
 bool ItemDetailsWindow::on_key_press(GdkEventKey* key_event)
 {
-    if(key_event==nullptr){
+    if (key_event == nullptr) {
         return false;
     }
-    if(key_event->keyval==GDK_KEY_Escape){
+    if (key_event->keyval == GDK_KEY_Escape) {
         hide();
         return true;
     }

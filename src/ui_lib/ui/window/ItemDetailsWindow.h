@@ -21,13 +21,13 @@
 #include <glibmm/i18n.h>
 #include <gtkmm-3.0/gtkmm.h>
 
-struct ItemDetailsWindow:public Gtk::Window
+struct ItemDetailsWindow : public Gtk::Window
 {
     ItemDetailsWindow();
 
     Gtk::ScrolledWindow scrolled_win;
     Gtk::TextView text_view;
-    Glib::RefPtr<Gtk::TextBuffer> ref_text_buffer;
+    Glib::RefPtr <Gtk::TextBuffer> ref_text_buffer;
     Gtk::VBox v_box;
 
     bool on_key_press(GdkEventKey* key_event);
