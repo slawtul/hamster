@@ -76,7 +76,7 @@ WindowBody::WindowBody()
     ref_primary_item_store = Gtk::ListStore::create(columns);
     ref_secondary_item_store = Gtk::ListStore::create(columns);
 
-    auto ref_tree_model = (Glib::RefPtr <Gtk::TreeModel>) ref_primary_item_store;
+    auto ref_tree_model = (Glib::RefPtr<Gtk::TreeModel>) ref_primary_item_store;
     ref_tree_model->signal_row_inserted().connect(sigc::mem_fun(*this, &WindowBody::on_row_inserted));
     ref_tree_model->signal_row_deleted().connect(sigc::mem_fun(*this, &WindowBody::on_row_deleted));
     ref_tree_model->signal_rows_reordered().connect(sigc::mem_fun(*this, &WindowBody::on_rows_reordered));
@@ -151,10 +151,10 @@ bool WindowBody::move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& te
     return false;
 }
 
-void WindowBody::delete_items(std::vector <Gtk::TreePath>&& paths)
+void WindowBody::delete_items(std::vector<Gtk::TreePath>&& paths)
 {
     //Rows can be deleted using TreeRowReference only
-    std::vector <Gtk::TreeRowReference> row_refs{};
+    std::vector<Gtk::TreeRowReference> row_refs{};
     row_refs.reserve(paths.size());
     for (const auto& path:paths) {
         row_refs.emplace_back(item_list.get_model(), path);
@@ -167,7 +167,7 @@ void WindowBody::delete_items(std::vector <Gtk::TreePath>&& paths)
     }
 }
 
-void WindowBody::delete_items(std::vector <Gtk::TreeRow>&& rows) const
+void WindowBody::delete_items(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
         ref_primary_item_store->erase(row);
@@ -184,12 +184,12 @@ void WindowBody::delete_last_items(int store_sz, int max_list_size) const
     }
 }
 
-void WindowBody::transform_to_lowercase(std::vector <Gtk::TreePath>&& paths)
+void WindowBody::transform_to_lowercase(std::vector<Gtk::TreePath>&& paths)
 {
     transform_to_lowercase(convert_to_rows(paths));
 }
 
-void WindowBody::transform_to_lowercase(std::vector <Gtk::TreeRow>&& rows) const
+void WindowBody::transform_to_lowercase(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
         row[columns.item_display_value] = row.get_value(columns.item_display_value).lowercase();
@@ -197,12 +197,12 @@ void WindowBody::transform_to_lowercase(std::vector <Gtk::TreeRow>&& rows) const
     }
 }
 
-void WindowBody::transform_to_uppercase(std::vector <Gtk::TreePath>&& paths)
+void WindowBody::transform_to_uppercase(std::vector<Gtk::TreePath>&& paths)
 {
     transform_to_uppercase(convert_to_rows(paths));
 }
 
-void WindowBody::transform_to_uppercase(std::vector <Gtk::TreeRow>&& rows) const
+void WindowBody::transform_to_uppercase(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
         row[columns.item_display_value] = row.get_value(columns.item_display_value).uppercase();
@@ -210,12 +210,12 @@ void WindowBody::transform_to_uppercase(std::vector <Gtk::TreeRow>&& rows) const
     }
 }
 
-void WindowBody::mask_with_stars(std::vector <Gtk::TreePath>&& paths)
+void WindowBody::mask_with_stars(std::vector<Gtk::TreePath>&& paths)
 {
     mask_with_stars(convert_to_rows(paths));
 }
 
-void WindowBody::mask_with_stars(std::vector <Gtk::TreeRow>&& rows) const
+void WindowBody::mask_with_stars(std::vector<Gtk::TreeRow>&& rows) const
 {
     TextUtil tu{};
     for (const auto& row:rows) {
@@ -596,7 +596,7 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
 }
 
 //HELPER METHODS
-std::vector <Gtk::TreeModel::Path> WindowBody::get_selected_paths()
+std::vector<Gtk::TreeModel::Path> WindowBody::get_selected_paths()
 {
     return item_list.get_selection()->get_selected_rows();
 }
@@ -606,9 +606,9 @@ Gtk::TreeRow WindowBody::get_row(const Gtk::TreeModel::Path& path)
     return *(item_list.get_model()->get_iter(path));
 }
 
-std::vector <Gtk::TreeRow> WindowBody::convert_to_rows(std::vector <Gtk::TreePath>& paths)
+std::vector<Gtk::TreeRow> WindowBody::convert_to_rows(std::vector<Gtk::TreePath>& paths)
 {
-    std::vector <Gtk::TreeRow> rows;
+    std::vector<Gtk::TreeRow> rows;
     rows.reserve(paths.size());
 
     for (const auto& path:paths) {
@@ -617,9 +617,9 @@ std::vector <Gtk::TreeRow> WindowBody::convert_to_rows(std::vector <Gtk::TreePat
     return rows;
 }
 
-std::vector <Gtk::TreeRow> WindowBody::find_primary_store_rows(std::vector <Gtk::TreePath>&& secondary_store_paths)
+std::vector<Gtk::TreeRow> WindowBody::find_primary_store_rows(std::vector<Gtk::TreePath>&& secondary_store_paths)
 {
-    std::vector <Gtk::TreeRow> rows_to_update{};
+    std::vector<Gtk::TreeRow> rows_to_update{};
     rows_to_update.reserve(secondary_store_paths.size());
 
     for (const auto& path:secondary_store_paths) {
