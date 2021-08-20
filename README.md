@@ -108,7 +108,7 @@ You cannot paste text to destination window if you share a screen
 
 #### 3. About text item masking
 
-You can mask passwords with stars ****** but remember if you chose _'Save list to a file'_ in _'Preferences'_ window your password will be saved as a __plain text__ in ~/.config/hamster/item.json file
+You can mask passwords with stars ****** (`ALT+M`) but remember if you chose _'Save list to a file'_ in _'Preferences'_ window your password will be saved as a __plain text__ in ~/.config/hamster/item.json file
 
 ```json
 {
