@@ -103,7 +103,7 @@ struct WindowBody : public Gtk::VBox
     void transform_to_uppercase(std::vector <Gtk::TreeRow>&& rows) const;
     void mask_with_stars(std::vector <Gtk::TreePath>&& paths);
     void mask_with_stars(std::vector <Gtk::TreeRow>&& rows) const;
-    bool move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const;
+    bool move_item_top(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const;
     void delete_items(std::vector <Gtk::TreePath>&& paths);
     void delete_items(std::vector <Gtk::TreeRow>&& rows) const;
     void delete_last_items(int store_sz, int max_list_size) const;

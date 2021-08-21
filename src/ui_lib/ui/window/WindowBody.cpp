@@ -140,7 +140,7 @@ void WindowBody::append_welcome_items() const
     row3[columns.item_display_value] = _("Press <Ctrl+P> to open preferences window");
 }
 
-bool WindowBody::move_item(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const
+bool WindowBody::move_item_top(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const
 {
     for (const auto& row:rows) {
         if (text.length() == row.get_value(columns.item_value).length() && text == row.get_value(columns.item_value)) {
@@ -273,7 +273,7 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
     }
 
     //If copied text already exists move it to the top and do nothing else...
-    if (move_item(ref_primary_item_store->children(), text)) {
+    if (move_item_top(ref_primary_item_store->children(), text)) {
         return;
     }
 
