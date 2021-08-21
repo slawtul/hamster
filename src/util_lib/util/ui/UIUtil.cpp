@@ -40,3 +40,4 @@ void UIUtil::append_to_store(Glib::RefPtr <Gtk::ListStore>& store, const std::ve
     }
 
 }
+

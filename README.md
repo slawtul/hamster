@@ -21,7 +21,7 @@
 
 Before building an app on your local machine, make sure you have installed below libs:
 
-__Elementary >= 5__
+__Elementary OS Hera (5), Odin (6)__
 ```bash
 sudo apt install meson g++ libgtkmm-3.0-dev libxt-dev gettext wmctrl
 ```
