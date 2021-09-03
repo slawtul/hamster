@@ -570,8 +570,9 @@ void WindowBody::show_item_details_window(const Glib::ustring& text)
 void WindowBody::past_items(const std::string& prefix, const std::string& suffix, bool decorate_any_item)
 {
     const auto path_list = get_selected_paths();
-    auto selected_paths = path_list; //Reverse a copied vector
+    auto selected_paths = path_list;
 
+    //Reverse a copied vector
     if (selection_order == SelectionOrder::SHIFT_UP) {
         std::reverse(selected_paths.begin(), selected_paths.end());
     }
