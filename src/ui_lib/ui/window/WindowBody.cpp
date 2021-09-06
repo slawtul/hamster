@@ -295,7 +295,7 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
     row[columns.item_display_value] = tu.calculate_display_value(text); // Show short,one liner text value
     item_list.set_cursor(ref_primary_item_store->get_path(row));
 
-    //Delete if too many...
+    // Delete if too many...
     delete_last_items((int) ref_primary_item_store->children().size(), (int) ref_settings->get_double("item-list-size"));
 
     LogUtil lu{};
@@ -345,7 +345,7 @@ bool WindowBody::on_item_list_focus_in(GdkEventFocus* focus_event)
         return false;
     }
 
-    //Select first row if no selected rows
+    // Select first row if no selected rows
     const auto ref_item_store = item_list.get_model();
     if (!ref_item_store->children().empty() && get_selected_paths().empty()) {
         item_list.set_cursor(ref_item_store->get_path(ref_item_store->children()[0]));
