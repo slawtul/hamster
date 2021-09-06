@@ -18,7 +18,7 @@
 #include "WindowBody.h"
 
 WindowBody::WindowBody()
-        : item_list(1, false, Gtk::SELECTION_MULTIPLE), //Where '1' means: show one column only (column name: 'item_display_value')
+        : item_list(1, false, Gtk::SELECTION_MULTIPLE), // Where '1' means: show one column only (column name: 'item_display_value')
           selection_order{SelectionOrder::SHIFT_DOWN},
           store_type{StoreType::PRIMARY}
 {
@@ -156,7 +156,7 @@ bool WindowBody::move_item_top(Gtk::TreeNodeChildren&& rows, const Glib::ustring
 //---------------------------------------------------------------
 void WindowBody::delete_items(std::vector<Gtk::TreePath>&& paths)
 {
-    //Rows can be deleted using TreeRowReference only
+    // Rows can be deleted using TreeRowReference only
     std::vector<Gtk::TreeRowReference> row_refs{};
     row_refs.reserve(paths.size());
     for (const auto& path:paths) {
@@ -244,9 +244,9 @@ void WindowBody::on_search_change()
         TextUtil tu{};
         auto search_str = (std::string) search_entry.get_text();
 
-        //Escape non-alpha chars because we want treat them as regular chars
-        //Eg. user wants to use '.' as dot not as 'any' regexp char
-        //Eg. user wants to use '*' as star not as 'zero or more' regexp character,etc...
+        // Escape non-alpha chars because we want treat them as regular chars
+        // Eg. user wants to use '.' as dot not as 'any' regexp char
+        // Eg. user wants to use '*' as star not as 'zero or more' regexp character,etc...
         auto esc_str = tu.escape_nonalpha(search_str);
         const auto pattern = std::regex{esc_str, std::regex_constants::icase};
         std::smatch sm{};
@@ -274,7 +274,7 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
         return;
     }
 
-    //Waiting for new copied text...
+    // Waiting for new copied text...
     auto text = ref_clipboard->wait_for_text();
 
     TextUtil tu{};
@@ -285,14 +285,14 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
         text = tu.trim_str(text);
     }
 
-    //If copied text already exists move it to the top and do nothing else...
+    // If copied text already exists move it to the top and do nothing else...
     if (move_item_top(ref_primary_item_store->children(), text)) {
         return;
     }
 
     const auto row = *(ref_primary_item_store->prepend());
-    row[columns.item_value] = text;                                     //Save in memory original text value
-    row[columns.item_display_value] = tu.calculate_display_value(text); //Show short,one liner text value
+    row[columns.item_value] = text;                                     // Save in memory original text value
+    row[columns.item_display_value] = tu.calculate_display_value(text); // Show short,one liner text value
     item_list.set_cursor(ref_primary_item_store->get_path(row));
 
     //Delete if too many...
@@ -356,8 +356,8 @@ bool WindowBody::on_item_list_focus_in(GdkEventFocus* focus_event)
 //------------------------------------------------------
 bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 {
-    //Events with 'Enter' key cannot be fetched with 'signal_key_press_event' in ListTextView widget
-    //In this widget 'Enter' means: row edit mode
+    // Events with 'Enter' key cannot be fetched with 'signal_key_press_event' in ListTextView widget
+    // In this widget 'Enter' means: row edit mode
     if (gdk_event == nullptr) {
         return false;
     }
@@ -370,20 +370,20 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 
     const auto is_SHIFT_pressed = (state == 1 || state == 3 || state == 17 || state == 19);
 
-    //ROWS SELECTION HANDLING
+    // ROWS SELECTION HANDLING
     if (get_selected_paths().size() == 1) {
         selection_counter = 0;
         selection_order = SelectionOrder::NO_SELECTION;
     }
 
-    //'SHIFT+UP' select up
+    // 'SHIFT+UP' select up
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Up && is_SHIFT_pressed) {
         lu.log_if_debug("\nSelection order up");
         selection_order = SelectionOrder::SHIFT_UP;
         ++selection_counter;
     }
 
-    //'SHIFT+DOWN' select down
+    // 'SHIFT+DOWN' select down
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Down && is_SHIFT_pressed) {
         lu.log_if_debug("\nSelection order down");
         selection_order = SelectionOrder::SHIFT_DOWN;
@@ -392,7 +392,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 
     selection_order = selection_counter < 0 ? SelectionOrder::SHIFT_DOWN : SelectionOrder::SHIFT_UP;
 
-    //'SHIFT+ENTER' paste but before show prefix and suffix entry fields
+    // 'SHIFT+ENTER' paste but before show prefix and suffix entry fields
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Return && is_SHIFT_pressed) {
         lu.log_if_debug("\nOpen prefix/suffix form");
         ps_separator.show();
@@ -401,7 +401,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
         return true;
     }
 
-    //'ENTER' paste items
+    // 'ENTER' paste items
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Return) {
         if (ref_settings->get_boolean("set-focus-on-search-input")) {
             search_entry.grab_focus();
@@ -417,7 +417,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
         prefix = tu.convert_to_newline_or_tab(prefix);
         suffix = tu.convert_to_newline_or_tab(suffix);
 
-        past_items(prefix, suffix, false); //'false'-do not add prefix and suffix when one item selected only
+        past_items(prefix, suffix, false); // 'false'- do not add prefix and suffix when one item selected only
 
         if (ref_settings->get_boolean("clear-search-input")) {
             search_entry.set_text("");
@@ -439,7 +439,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
     const auto type = gdk_event->type;
     const auto state = gdk_event->key.state;
 
-    //'ESCAPE' close widget
+    // 'ESCAPE' close widget
     if (type == GDK_KEY_RELEASE && key == GDK_KEY_Escape) {
         ps_separator.hide();
         prefix_suffix_form.hide();
@@ -447,7 +447,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
         return true;
     }
 
-    //'ENTER' paste items
+    // 'ENTER' paste items
     if (type == GDK_KEY_RELEASE && key == GDK_KEY_Return && (state == 0 || state == 2 || state == 16 || state == 18)) {
         item_list.grab_focus();
         if (ref_settings->get_boolean("set-focus-on-search-input")) {
@@ -465,7 +465,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
         prefix = tu.convert_to_newline_or_tab(prefix);
         suffix = tu.convert_to_newline_or_tab(suffix);
 
-        past_items(prefix, suffix, true); //'true'-add prefix and suffix even if one item selected
+        past_items(prefix, suffix, true); // 'true' - add prefix and suffix even if one item selected
 
         if (ref_settings->get_boolean("clear-search-input")) {
             search_entry.set_text("");
@@ -485,16 +485,16 @@ bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
 
     const auto key = key_event->keyval;
 
-    //'ESCAPE' OR 'TAB' move to search entry
+    // 'ESCAPE' OR 'TAB' move to search entry
     if (key == GDK_KEY_Escape || key == GDK_KEY_Tab || key == GDK_KEY_slash) {
         search_entry.grab_focus();
         return true;
     }
 
-    //'DELETE' item
+    // 'DELETE' item
     if (key == GDK_KEY_Delete) {
         if (store_type == StoreType::SECONDARY) {
-            delete_items(find_primary_store_rows(get_selected_paths())); //secondary store selected paths
+            delete_items(find_primary_store_rows(get_selected_paths())); // secondary store selected paths
         }
         delete_items(get_selected_paths());
         return true;
@@ -502,34 +502,34 @@ bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
 
     const auto state = key_event->state;
     if (state == 8 || state == 10 || state == 24 || state == 26) {
-        //'ALT+D' show item details window
+        // 'ALT+D' show item details window
         if (key == GDK_KEY_d || key == GDK_KEY_D) {
             show_item_details_window(get_row(get_selected_paths()[0]).get_value(columns.item_value));
             return true;
         }
 
-        //'ALT+L' transform to lowercase
+        // 'ALT+L' transform to lowercase
         if (key == GDK_KEY_l || key == GDK_KEY_L) {
             if (store_type == StoreType::SECONDARY) {
-                transform_to_lowercase(find_primary_store_rows(get_selected_paths())); //secondary store selected paths
+                transform_to_lowercase(find_primary_store_rows(get_selected_paths())); // secondary store selected paths
             }
             transform_to_lowercase(get_selected_paths());
             return true;
         }
 
-        //'ALT+U' transform to uppercase
+        // 'ALT+U' transform to uppercase
         if (key == GDK_KEY_u || key == GDK_KEY_U) {
             if (store_type == StoreType::SECONDARY) {
-                transform_to_uppercase(find_primary_store_rows(get_selected_paths())); //secondary store selected paths
+                transform_to_uppercase(find_primary_store_rows(get_selected_paths())); // secondary store selected paths
             }
             transform_to_uppercase(get_selected_paths());
             return true;
         }
 
-        //'ALT+M' mask with *********
+        // 'ALT+M' mask with *********
         if (key == GDK_KEY_m || key == GDK_KEY_M) {
             if (store_type == StoreType::SECONDARY) {
-                mask_with_stars(find_primary_store_rows(get_selected_paths())); //secondary store selected paths
+                mask_with_stars(find_primary_store_rows(get_selected_paths())); // secondary store selected paths
             }
             mask_with_stars(get_selected_paths());
             return true;
@@ -549,13 +549,13 @@ bool WindowBody::on_search_entry_event(GdkEvent* gdk_event)
     const auto type = gdk_event->type;
     const auto key = gdk_event->key.keyval;
 
-    //'DOWN' move to list
+    // 'DOWN' move to list
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Down) {
         item_list.grab_focus();
         return true;
     }
 
-    //'ESC' clear search entry or minimize application
+    // 'ESC' clear search entry or minimize application
     if (type == GDK_KEY_PRESS && key == GDK_KEY_Escape) {
         search_entry.get_text_length() == 0 ? this->get_window()->iconify() : search_entry.set_text("");
         search_entry.grab_focus();
@@ -574,8 +574,8 @@ void WindowBody::send_ctrl_v_key_event()
 
     XTestGrabControl(display, True);
     XTestFakeKeyEvent(display, left_control_key, True, 0);
-    XTestFakeKeyEvent(display, v_key, True, 0);  //True means key press
-    XTestFakeKeyEvent(display, v_key, False, 0); //False means key release
+    XTestFakeKeyEvent(display, v_key, True, 0);  // 'True' means key press
+    XTestFakeKeyEvent(display, v_key, False, 0); // 'False' means key release
     XTestFakeKeyEvent(display, left_control_key, False, 0);
 
     XSync(display, False);
@@ -596,7 +596,7 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
     const auto path_list = get_selected_paths();
     auto selected_paths = path_list;
 
-    //Reverse a copied vector
+    // Reverse a copied vector
     if (selection_order == SelectionOrder::SHIFT_UP) {
         std::reverse(selected_paths.begin(), selected_paths.end());
     }
@@ -614,7 +614,7 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
         }
     }
 
-    ref_clipboard->set_text(text_to_paste); //Send text to clipboard...
+    ref_clipboard->set_text(text_to_paste); // Send text to clipboard...
 
     std::this_thread::sleep_for(std::chrono::milliseconds((short) ref_settings->get_double("delay-pasting")));
     send_ctrl_v_key_event();
