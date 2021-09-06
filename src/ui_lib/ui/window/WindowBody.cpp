@@ -121,6 +121,7 @@ WindowBody::WindowBody()
     show();
 }
 
+//-------------------------------------------
 void WindowBody::append_welcome_items() const
 {
     const auto row0 = *(ref_primary_item_store->append());
@@ -140,6 +141,7 @@ void WindowBody::append_welcome_items() const
     row3[columns.item_display_value] = _("Press <Ctrl+P> to open preferences window");
 }
 
+//-------------------------------------------------------------------------------------------
 bool WindowBody::move_item_top(Gtk::TreeNodeChildren&& rows, const Glib::ustring& text) const
 {
     for (const auto& row:rows) {
@@ -151,6 +153,7 @@ bool WindowBody::move_item_top(Gtk::TreeNodeChildren&& rows, const Glib::ustring
     return false;
 }
 
+//---------------------------------------------------------------
 void WindowBody::delete_items(std::vector<Gtk::TreePath>&& paths)
 {
     //Rows can be deleted using TreeRowReference only
@@ -167,6 +170,7 @@ void WindowBody::delete_items(std::vector<Gtk::TreePath>&& paths)
     }
 }
 
+//-------------------------------------------------------------------
 void WindowBody::delete_items(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
@@ -174,6 +178,7 @@ void WindowBody::delete_items(std::vector<Gtk::TreeRow>&& rows) const
     }
 }
 
+//-----------------------------------------------------------------------
 void WindowBody::delete_last_items(int store_sz, int max_list_size) const
 {
     const auto diff_sz = store_sz - max_list_size;
@@ -184,11 +189,13 @@ void WindowBody::delete_last_items(int store_sz, int max_list_size) const
     }
 }
 
+//-------------------------------------------------------------------------
 void WindowBody::transform_to_lowercase(std::vector<Gtk::TreePath>&& paths)
 {
     transform_to_lowercase(convert_to_rows(paths));
 }
 
+//-----------------------------------------------------------------------------
 void WindowBody::transform_to_lowercase(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
@@ -197,11 +204,13 @@ void WindowBody::transform_to_lowercase(std::vector<Gtk::TreeRow>&& rows) const
     }
 }
 
+//-------------------------------------------------------------------------
 void WindowBody::transform_to_uppercase(std::vector<Gtk::TreePath>&& paths)
 {
     transform_to_uppercase(convert_to_rows(paths));
 }
 
+//-----------------------------------------------------------------------------
 void WindowBody::transform_to_uppercase(std::vector<Gtk::TreeRow>&& rows) const
 {
     for (const auto& row:rows) {
@@ -210,11 +219,13 @@ void WindowBody::transform_to_uppercase(std::vector<Gtk::TreeRow>&& rows) const
     }
 }
 
+//------------------------------------------------------------------
 void WindowBody::mask_with_stars(std::vector<Gtk::TreePath>&& paths)
 {
     mask_with_stars(convert_to_rows(paths));
 }
 
+//----------------------------------------------------------------------
 void WindowBody::mask_with_stars(std::vector<Gtk::TreeRow>&& rows) const
 {
     TextUtil tu{};
@@ -224,6 +235,7 @@ void WindowBody::mask_with_stars(std::vector<Gtk::TreeRow>&& rows) const
     }
 }
 
+//---------------------------------
 void WindowBody::on_search_change()
 {
     ref_secondary_item_store->clear();
@@ -255,6 +267,7 @@ void WindowBody::on_search_change()
     }
 }
 
+//--------------------------------------------------------------
 void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
 {
     if (event == nullptr) {
@@ -289,6 +302,7 @@ void WindowBody::on_clipboard_change(GdkEventOwnerChange* event)
     lu.log_if_debug("\nStored items: %d", ref_primary_item_store->children().size());
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------
 void WindowBody::on_row_inserted([[maybe_unused]] const Gtk::TreeModel::Path& path, [[maybe_unused]] const Gtk::TreeModel::iterator& iter) const
 {
     if (ref_settings->get_boolean("save-list")) {
@@ -300,6 +314,7 @@ void WindowBody::on_row_inserted([[maybe_unused]] const Gtk::TreeModel::Path& pa
     }
 }
 
+//--------------------------------------------------------------------------------------
 void WindowBody::on_row_deleted([[maybe_unused]] const Gtk::TreeModel::Path& path) const
 {
     if (ref_settings->get_boolean("save-list")) {
@@ -311,6 +326,7 @@ void WindowBody::on_row_deleted([[maybe_unused]] const Gtk::TreeModel::Path& pat
     }
 }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 void WindowBody::on_rows_reordered([[maybe_unused]] const Gtk::TreeModel::Path& path, [[maybe_unused]] const Gtk::TreeModel::iterator& iter, [[maybe_unused]] int* new_order) const
 {
     if (ref_settings->get_boolean("save-list")) {
@@ -322,6 +338,7 @@ void WindowBody::on_rows_reordered([[maybe_unused]] const Gtk::TreeModel::Path& 
     }
 }
 
+//----------------------------------------------------------------
 bool WindowBody::on_item_list_focus_in(GdkEventFocus* focus_event)
 {
     if (focus_event == nullptr) {
@@ -336,6 +353,7 @@ bool WindowBody::on_item_list_focus_in(GdkEventFocus* focus_event)
     return true;
 }
 
+//------------------------------------------------------
 bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
 {
     //Events with 'Enter' key cannot be fetched with 'signal_key_press_event' in ListTextView widget
@@ -410,6 +428,7 @@ bool WindowBody::on_item_list_event(GdkEvent* gdk_event)
     return false;
 }
 
+//---------------------------------------------------------------
 bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
 {
     if (gdk_event == nullptr) {
@@ -457,6 +476,7 @@ bool WindowBody::on_prefix_suffix_form_event(GdkEvent* gdk_event)
     return false;
 }
 
+//-------------------------------------------------------------
 bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
 {
     if (key_event == nullptr) {
@@ -519,6 +539,7 @@ bool WindowBody::on_item_list_key_press(GdkEventKey* key_event)
     return false;
 }
 
+//---------------------------------------------------------
 bool WindowBody::on_search_entry_event(GdkEvent* gdk_event)
 {
     if (gdk_event == nullptr) {
@@ -544,6 +565,7 @@ bool WindowBody::on_search_entry_event(GdkEvent* gdk_event)
     return false;
 }
 
+//--------------------------------------
 void WindowBody::send_ctrl_v_key_event()
 {
     const auto display = XOpenDisplay(nullptr);
@@ -560,6 +582,7 @@ void WindowBody::send_ctrl_v_key_event()
     XTestGrabControl(display, False);
 }
 
+//------------------------------------------------------------------
 void WindowBody::show_item_details_window(const Glib::ustring& text)
 {
     item_details_window.set_text(text);
@@ -567,6 +590,7 @@ void WindowBody::show_item_details_window(const Glib::ustring& text)
     item_details_window.present();
 }
 
+//-------------------------------------------------------------------------------------------------------
 void WindowBody::past_items(const std::string& prefix, const std::string& suffix, bool decorate_any_item)
 {
     const auto path_list = get_selected_paths();
@@ -596,17 +620,20 @@ void WindowBody::past_items(const std::string& prefix, const std::string& suffix
     send_ctrl_v_key_event();
 }
 
-//HELPER METHODS
+// HELPER METHODS
+//----------------------------------------------------------------
 std::vector<Gtk::TreeModel::Path> WindowBody::get_selected_paths()
 {
     return item_list.get_selection()->get_selected_rows();
 }
 
+//----------------------------------------------------------------
 Gtk::TreeRow WindowBody::get_row(const Gtk::TreeModel::Path& path)
 {
     return *(item_list.get_model()->get_iter(path));
 }
 
+//--------------------------------------------------------------------------------------
 std::vector<Gtk::TreeRow> WindowBody::convert_to_rows(std::vector<Gtk::TreePath>& paths)
 {
     std::vector<Gtk::TreeRow> rows;
@@ -618,6 +645,7 @@ std::vector<Gtk::TreeRow> WindowBody::convert_to_rows(std::vector<Gtk::TreePath>
     return rows;
 }
 
+//---------------------------------------------------------------------------------------------------------------
 std::vector<Gtk::TreeRow> WindowBody::find_primary_store_rows(std::vector<Gtk::TreePath>&& secondary_store_paths)
 {
     std::vector<Gtk::TreeRow> rows_to_update{};
