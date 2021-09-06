@@ -35,6 +35,7 @@ const std::regex TextUtil::cbra_l_re{"\\{"};
 const std::regex TextUtil::cbra_r_re{"\\}"};
 const std::regex TextUtil::line_re{"\\|"};
 
+//--------------------------------------------------------------------------------------------------
 Glib::ustring TextUtil::sub_str(const Glib::ustring& text, uint n_letters, const Glib::ustring& end)
 {
     if (text.length() > n_letters) {
@@ -43,16 +44,19 @@ Glib::ustring TextUtil::sub_str(const Glib::ustring& text, uint n_letters, const
     return text;
 }
 
+//-------------------------------------------------------
 bool TextUtil::has_only_spaces(const Glib::ustring& text)
 {
     return text.find_first_not_of(" \t\n\v\f\r") == Glib::ustring::npos;
 }
 
+//---------------------------------------------------------------------
 Glib::ustring TextUtil::join_lines(Glib::ustring& text, uint n_letters)
 {
     return std::regex_replace(text.substr(0, n_letters).c_str(), whitespaces_re, " ");
 }
 
+//---------------------------------------------------------
 Glib::ustring TextUtil::trim_str(const Glib::ustring& text)
 {
     const auto whitespaces = " \t\n";
@@ -65,6 +69,7 @@ Glib::ustring TextUtil::trim_str(const Glib::ustring& text)
     return text.substr(begin, range);
 }
 
+//-------------------------------------------------------
 std::string TextUtil::mask_str(const Glib::ustring& text)
 {
     if (text.empty()) {
@@ -85,6 +90,7 @@ std::string TextUtil::mask_str(const Glib::ustring& text)
     return masked_str;
 }
 
+//----------------------------------------------------------------
 std::string TextUtil::convert_to_newline_or_tab(std::string& text)
 {
     text = std::regex_replace(text, newlines_re, "\n");
@@ -92,6 +98,7 @@ std::string TextUtil::convert_to_newline_or_tab(std::string& text)
     return text;
 }
 
+//------------------------------------------------------------
 std::string TextUtil::escape_nonalpha(const std::string& text)
 {
     std::string esc_str;
@@ -112,6 +119,7 @@ std::string TextUtil::escape_nonalpha(const std::string& text)
     return esc_str;
 }
 
+//------------------------------------------------------------------
 Glib::ustring TextUtil::calculate_display_value(Glib::ustring& text)
 {
     text = join_lines(text, 48);

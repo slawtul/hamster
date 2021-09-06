@@ -18,6 +18,7 @@
 
 using json = nlohmann::json;
 
+//-----------------------------------------------------------------------------------------------------------
 std::vector <std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gtk::TreeModel::Children& rows)
 {
     ItemModelColumns columns{};
@@ -38,6 +39,7 @@ std::vector <std::map<std::string, std::string>> ItemUtil::items_to_vec(const Gt
     return vec;
 }
 
+//-----------------------------------------------------------------------------------------
 std::vector <std::map<std::string, std::string>> ItemUtil::json_items_to_vec(const json& j)
 {
     std::vector <std::map<std::string, std::string>> vec{};

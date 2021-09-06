@@ -101,6 +101,7 @@ ShortcutsWindow::ShortcutsWindow()
     add(v_box);
 }
 
+//--------------------------------------------------------
 bool ShortcutsWindow::on_key_press(GdkEventKey* key_event)
 {
     if (key_event == nullptr) {

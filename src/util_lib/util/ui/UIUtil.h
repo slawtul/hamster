@@ -21,8 +21,8 @@
 
 struct ItemModelColumns : public Gtk::TreeModel::ColumnRecord
 {
-    Gtk::TreeModelColumn <Glib::ustring> item_display_value; //Modified clipboard text value showed in list view widget
-    Gtk::TreeModelColumn <Glib::ustring> item_value;         //Original clipboard text value
+    Gtk::TreeModelColumn <Glib::ustring> item_display_value; // Modified clipboard text value showed in list view widget
+    Gtk::TreeModelColumn <Glib::ustring> item_value;         // Original clipboard text value
 
     ItemModelColumns()
     {

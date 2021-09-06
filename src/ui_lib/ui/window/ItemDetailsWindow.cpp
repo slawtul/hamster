@@ -47,11 +47,13 @@ ItemDetailsWindow::ItemDetailsWindow()
     add(v_box);
 }
 
+//---------------------------------------------------------------
 void ItemDetailsWindow::set_text(const Glib::ustring& text) const
 {
     ref_text_buffer->set_text(text);
 }
 
+//----------------------------------------------------------
 bool ItemDetailsWindow::on_key_press(GdkEventKey* key_event)
 {
     if (key_event == nullptr) {

@@ -16,6 +16,7 @@
  */
 #include "LogUtil.h"
 
+//----------------------------------------------------------------------
 void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text)
 {
 #ifdef DEBUG
@@ -23,6 +24,7 @@ void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text)
 #endif
 }
 
+//---------------------------------------------------------------------------------------------------
 void LogUtil::log_if_debug([[maybe_unused]] const std::string& log_text, [[maybe_unused]] size_t num)
 {
 #ifdef DEBUG

@@ -170,6 +170,7 @@ PreferencesWindow::PreferencesWindow()
     add(v_box);
 }
 
+//----------------------------------------------------------
 bool PreferencesWindow::on_key_press(GdkEventKey* key_event)
 {
     if (key_event == nullptr) {
@@ -182,6 +183,7 @@ bool PreferencesWindow::on_key_press(GdkEventKey* key_event)
     return false;
 }
 
+//--------------------------------------------------
 void PreferencesWindow::on_run_automatically_click()
 {
     const auto run_automatically = run_automatically_check.get_active();
@@ -200,31 +202,37 @@ void PreferencesWindow::on_run_automatically_click()
     }
 }
 
+//---------------------------------------------
 void PreferencesWindow::on_run_minimize_click()
 {
     ref_settings->set_boolean("run-minimize", run_minimize_check.get_active());
 }
 
+//---------------------------------------------------
 void PreferencesWindow::on_focus_search_input_click()
 {
     ref_settings->set_boolean("set-focus-on-search-input", focus_search_input_check.get_active());
 }
 
+//---------------------------------------------------
 void PreferencesWindow::on_clear_search_input_click()
 {
     ref_settings->set_boolean("clear-search-input", clear_search_input_check.get_active());
 }
 
+//-----------------------------------------------
 void PreferencesWindow::on_delay_pasting_change()
 {
     ref_settings->set_double("delay-pasting", delay_pasting_scale.get_value());
 }
 
+//-------------------------------------------------
 void PreferencesWindow::on_eliminate_spaces_click()
 {
     ref_settings->set_boolean("eliminate-spaces", eliminate_spaces_check.get_active());
 }
 
+//------------------------------------------
 void PreferencesWindow::on_save_list_click()
 {
     ref_settings->set_boolean("save-list", save_list_check.get_active());
@@ -234,16 +242,19 @@ void PreferencesWindow::on_save_list_click()
     }
 }
 
+//------------------------------------------------
 void PreferencesWindow::on_item_list_size_change()
 {
     ref_settings->set_double("item-list-size", item_list_size_scale.get_value());
 }
 
+//---------------------------------------------------
 void PreferencesWindow::on_item_prefix_change() const
 {
     ref_settings->set_string("item-prefix", item_prefix.get_text());
 }
 
+//---------------------------------------------------
 void PreferencesWindow::on_item_suffix_change() const
 {
     ref_settings->set_string("item-suffix", item_suffix.get_text());
