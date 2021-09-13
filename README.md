@@ -123,10 +123,10 @@ You can mask passwords with stars ****** (`ALT+M`) but remember if you chose _'S
 
 #### 4. Ubuntu terminal does not work with Hamster
 
+(Edit: Please note that something was changed in Ubuntu terminal. Nowadays Hamster app does not work with terminal)
+
 `SHIFT+CTRL+V` is a default shortcut for pasting in Ubuntu terminal. Please change it to `CTRL+V`
 ![screenshot](data/screenshots/github/ubuntu_terminal_paste_shortcut.png)
-
-Edit: Please note that something was changed in Ubuntu terminal. Nowadays Hamster app does not work with terminal
 
 #### 5. Hamster on all workspaces
 
